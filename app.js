@@ -16,8 +16,7 @@ const QUESTION_BANK = {
   medio: [
     {q:"¿Permaneció el arca del pacto en casa de Obed-edom durante tres meses?",a:true,e:"El arca estuvo tres meses en casa de Obed-edom, y el Señor bendijo su casa.",r:"2 Samuel 6:11"},
     {q:"¿Fue Ester quien llegó a ser reina y ayudó a salvar a su pueblo?",a:true,e:"Ester llegó a ser reina y arriesgó su vida para interceder por los judíos.",r:"Ester 4:14-16; 5:1-2"},
-    {q:"¿Negó Pedro a Jesús tres veces?",a:true,e:"Jesús anunció que Pedro lo negaría tres veces antes de que cantara el gallo.",r:"Lucas 22: deny"}
-      .q && {q:"¿Negó Pedro a Jesús tres veces?",a:true,e:"Jesús anunció que Pedro lo negaría tres veces antes de que cantara el gallo.",r:"Lucas 22:54-62"},
+    {q:"¿Negó Pedro a Jesús tres veces?",a:true,e:"Jesús anunció que Pedro lo negaría tres veces antes de que cantara el gallo.",r:"Lucas 22:54-62"},
     {q:"¿Fue Pablo uno de los doce apóstoles escogidos durante el ministerio terrenal de Jesús?",a:false,e:"Pablo fue llamado apóstol después de la resurrección de Jesús; no formó parte de los Doce originales.",r:"Hechos 9:1-16; 1 Corintios 15:8-9"},
     {q:"¿Recibió Daniel una interpretación de la escritura en la pared durante el banquete de Belsasar?",a:true,e:"Daniel interpretó las palabras escritas en la pared: MENE, MENE, TEKEL, UPARSIN.",r:"Daniel 5:25-28"},
     {q:"¿Fue Lázaro quien bautizó a Jesús en el río Jordán?",a:false,e:"Juan el Bautista bautizó a Jesús en el río Jordán.",r:"Mateo 3:13-17"},
