@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Pon a prueba tus conocimientos de la Biblia con preguntas de verdadero o falso.">
+  <title>Reto Bíblico | Verdadero o Falso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Reto Bíblico inicio"><span class="brand-mark">✦</span><span>RETO <b>BÍBLICO</b></span></a>
+      <span class="top-tag"><span class="live-dot"></span> JUEGA Y APRENDE</span>
+    </header>
+
+    <section class="screen active" id="home-screen">
+      <div class="hero">
+        <div class="eyebrow"><span>✧</span> UN DESAFÍO PARA TU FE</div>
+        <h1>¿Cuánto sabes<br>de la <em>Biblia?</em></h1>
+        <p class="hero-copy">Lee cada afirmación, piensa bien y demuestra cuánto conoces la Palabra de Dios.</p>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="book"><div class="book-spine"></div><span>✝</span><small>SANTA BIBLIA</small></div>
+          <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span><span class="spark spark-c">✦</span>
+        </div>
+      </div>
+      <div class="setup-card">
+        <div class="setup-heading"><div><span class="step-label">01 / PREPÁRATE</span><h2>Elige tu nivel</h2></div><span class="round-icon">☼</span></div>
+        <div class="levels" role="group" aria-label="Nivel de dificultad">
+          <button class="level selected" data-level="facil"><span class="level-icon">🌱</span><span><b>Fácil</b><small>Para comenzar</small></span><span class="check">✓</span></button>
+          <button class="level" data-level="medio"><span class="level-icon">🔥</span><span><b>Intermedio</b><small>Un poco más de reto</small></span><span class="check">✓</span></button>
+          <button class="level" data-level="dificil"><span class="level-icon">👑</span><span><b>Difícil</b><small>¡Pon a prueba tu saber!</small></span><span class="check">✓</span></button>
+        </div>
+        <div class="game-info"><span>◷ 10 preguntas</span><span>✦ Puntaje al final</span><span>▤ Con referencias bíblicas</span></div>
+        <button class="primary-btn" id="start-btn">COMENZAR RETO <span>→</span></button>
+      </div>
+      <p class="home-note">“Escudriñad las Escrituras” <span>— Juan 5:39</span></p>
+    </section>
+
+    <section class="screen" id="quiz-screen">
+      <div class="quiz-top"><button class="back-btn" id="quit-btn" aria-label="Salir">←</button><div class="quiz-level" id="quiz-level">NIVEL FÁCIL</div><div class="score-pill">✦ <b id="live-score">0</b> pts</div></div>
+      <div class="progress-meta"><span id="question-count">PREGUNTA 1 DE 10</span><span id="progress-percent">10%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="question-card">
+        <div class="question-kicker"><span>✧</span> ¿VERDADERO O FALSO?</div>
+        <div class="question-number" id="question-number">01</div>
+        <h2 id="question-text">Cargando pregunta…</h2>
+        <p class="question-hint">Selecciona la respuesta que consideres correcta.</p>
+        <div class="answers">
+          <button class="answer answer-true" data-answer="true"><span class="answer-symbol">✓</span><span><b>VERDADERO</b><small>La afirmación es correcta</small></span><span class="answer-arrow">→</span></button>
+          <button class="answer answer-false" data-answer="false"><span class="answer-symbol">✕</span><span><b>FALSO</b><small>La afirmación es incorrecta</small></span><span class="answer-arrow">→</span></button>
+        </div>
+        <div class="feedback" id="feedback" aria-live="polite" hidden><div class="feedback-title" id="feedback-title"></div><p id="feedback-explanation"></p><span class="verse-ref" id="verse-ref"></span><button class="next-btn" id="next-btn">SIGUIENTE PREGUNTA <span>→</span></button></div>
+      </div>
+      <p class="quiz-foot">Cada respuesta es una oportunidad para aprender más de la Palabra.</p>
+    </section>
+
+    <section class="screen" id="result-screen">
+      <div class="result-card">
+        <div class="result-icon" id="result-icon">🏆</div><div class="eyebrow">RETO COMPLETADO</div>
+        <h1 id="result-heading">¡Excelente trabajo!</h1><p class="result-copy" id="result-copy">Has terminado este desafío bíblico.</p>
+        <div class="score-ring" id="score-ring"><div><strong id="final-score">0</strong><span>DE 10</span></div></div>
+        <div class="result-stats"><div><strong id="correct-count">0</strong><span>Correctas</span></div><div><strong id="wrong-count">0</strong><span>Incorrectas</span></div><div><strong id="final-percent">0%</strong><span>Porcentaje</span></div></div>
+        <div class="result-verse">“La exposición de tus palabras alumbra.”<b>Salmos 119:130</b></div>
+        <button class="primary-btn" id="retry-btn">JUGAR DE NUEVO <span>↻</span></button><button class="text-btn" id="home-btn">Volver al inicio</button>
+      </div>
+    </section>
+    <footer>RETO BÍBLICO <span>•</span> CRECE EN CONOCIMIENTO Y FE</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
