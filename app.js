@@ -239,7 +239,8 @@ function startSingle(){
   buildLadder();screen("game");render();
 }
 function startCompetition(mode){
-  const names=[$("name-one").value.trim()||"Participante 1",$("name-two").value.trim()||"Participante 2"];
+  const defaults=mode==="teams"?["Equipo 1","Equipo 2"]:["Participante 1","Participante 2"];
+  const names=[$("name-one").value.trim(),$("name-two").value.trim()].map((name,i)=>!name||name===("Participante "+(i+1))?defaults[i]:name);
   const picked=shuffle(BANK);
   if(picked.length<16){alert("Se necesitan al menos 16 preguntas para esta modalidad.");return;}
   state.mode=mode;
@@ -313,7 +314,7 @@ function finish(){
   $("end-title").textContent=title;$("end-icon").textContent=a.score===b.score?"🤝":"🏆";
   $("end-points").textContent=a.score+" - "+b.score;
   $("end-copy").textContent=a.name+": "+a.score+" puntos ("+a.correct+"/8 aciertos). "+b.name+": "+b.score+" puntos ("+b.correct+"/8 aciertos).";
-  $("end-reference").textContent="Cada participante/equipo respondió 8 preguntas diferentes, alternando un turno cada uno. Cada acierto vale 5 puntos.";
+  $("end-reference").textContent="Cada participante/equipo respondió 8 preguntas diferentes y exclusivas, alternando turnos hasta completar 16 preguntas. Cada acierto vale 5 puntos; máximo individual: 40 puntos."
   screen("end");
 }
 function continueGame(){
