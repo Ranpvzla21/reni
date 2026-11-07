@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101827">
-<meta name="description" content="¿Quién quiere ser millonario bíblico? Responde preguntas de la Biblia y alcanza el gran premio.">
-<title>Millonario Bíblico</title>
+<meta name="description" content="Desafío Bíblico FTU 2026: concurso interactivo de preguntas bíblicas con 15 niveles y comodines.">
+<title>Desafío Bíblico FTU 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <main class="app">
-<header class="topbar"><a class="brand" href="#" id="brand-home"><span class="brand-icon">✦</span> MILLONARIO <b>BÍBLICO</b></a><span class="top-label">APRENDE · JUEGA · CRECE</span></header>
+<header class="topbar"><a class="brand" href="#" id="brand-home"><span class="brand-icon">✦</span> DESAFÍO <b>BÍBLICO FTU 2026</b></a><span class="top-label">EDICIÓN OFICIAL · 2026</span></header>
 <section class="screen active" id="home">
-  <div class="hero"><div class="eyebrow">EL GRAN DESAFÍO DE LAS ESCRITURAS</div><h1>¿Quién quiere ser<br><em>millonario bíblico?</em></h1><p>15 preguntas. 4 opciones. Un camino hasta el millón de puntos. ¿Cuánto conoces de la Palabra de Dios?</p><div class="hero-book" aria-hidden="true"><span>✝</span><small>SANTA BIBLIA</small></div></div>
+  <div class="hero"><div class="eyebrow">EL GRAN DESAFÍO DE LAS ESCRITURAS</div><h1>Desafío<br><em>Bíblico FTU 2026</em></h1><p>15 preguntas. 4 opciones. Un camino hasta el millón de puntos. ¿Cuánto conoces de la Palabra de Dios?</p><div class="hero-book" aria-hidden="true"><span>✝</span><small>SANTA BIBLIA</small></div></div>
   <div class="intro-card"><div class="intro-row"><div><small>GRAN PREMIO</small><strong>1.000.000</strong><span>puntos bíblicos</span></div><div class="medal">🏆</div></div><div class="rules"><span>15 preguntas</span><span>3 comodines</span><span>2 niveles seguros</span></div><button class="gold-btn" id="start">COMENZAR JUEGO <b>→</b></button></div>
   <p class="home-verse">“Procura con diligencia presentarte a Dios aprobado.” <b>2 Timoteo 2:15</b></p>
 </section>
 <section class="screen" id="game">
-  <div class="game-head"><button class="exit" id="exit" aria-label="Salir">←</button><div class="game-title">MILLONARIO <b>BÍBLICO</b></div><div class="score-chip">✦ <span id="score">0</span></div></div>
+  <div class="game-head"><button class="exit" id="exit" aria-label="Salir">←</button><div class="game-title">DESAFÍO <b>BÍBLICO FTU 2026</b></div><div class="score-chip">✦ <span id="score">0</span></div></div>
   <div class="game-layout">
     <div class="play-area"><div class="question-meta"><span id="q-number">PREGUNTA 1 DE 15</span><span id="difficulty">FÁCIL</span></div><div class="progress"><i id="progress"></i></div>
       <article class="question-card"><div class="question-label">DESAFÍO BÍBLICO</div><h2 id="question">Preparando pregunta…</h2><div class="answers" id="answers"></div><div class="feedback" id="feedback" hidden aria-live="polite"><strong id="feedback-title"></strong><p id="explanation"></p><small id="reference"></small><button class="gold-btn" id="continue">CONTINUAR <b>→</b></button></div></article>
@@ -30,6 +30,6 @@
 <section class="screen" id="end">
  <div class="end-card"><div class="trophy" id="end-icon">🏆</div><div class="eyebrow">PARTIDA FINALIZADA</div><h1 id="end-title">¡Buen trabajo!</h1><p id="end-copy"></p><div class="final-points"><strong id="end-points">0</strong><span>PUNTOS CONSEGUIDOS</span></div><p class="end-reference" id="end-reference"></p><button class="gold-btn" id="again">JUGAR OTRA VEZ ↻</button><button class="plain-btn" id="back-home">VOLVER AL INICIO</button></div>
 </section>
-<footer>UN JUEGO PARA CONOCER MÁS LA PALABRA DE DIOS</footer>
+<footer>FTU 2026 · UN DESAFÍO PARA CONOCER MÁS LA PALABRA DE DIOS</footer>
 </main><script src="app.js"></script>
 </body></html>
