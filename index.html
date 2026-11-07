@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#12c6d2">
-<meta name="description" content="Desafío Bíblico FTU 2026: concurso interactivo de preguntas bíblicas con 15 niveles y comodines.">
+<meta name="description" content="Desafío Bíblico FTU 2026: preguntas interactivas basadas exclusivamente en 2 Corintios, con referencias LBLA.">
 <title>Desafío Bíblico FTU 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -11,30 +11,30 @@
 </head>
 <body>
 <main class="app">
-<header class="topbar"><a class="brand" href="#" id="brand-home"><span class="brand-icon">✦</span> DESAFÍO <b>BÍBLICO FTU 2026</b></a><span class="top-label">EDICIÓN OFICIAL · 2026</span></header>
+<header class="topbar"><a class="brand" href="#" id="brand-home"><span class="brand-icon">✦</span> 2 CORINTIOS <b>· LBLA</b></a><span class="top-label">EDICIÓN OFICIAL · 2026</span></header>
 <section class="screen active" id="home">
   <div class="hero">
     <img class="hero-cover" src="assets/portada-ftu.jpg..jpg" alt="Desafío Bíblico FTU Venezuela 2026">
-    <div class="eyebrow">EL GRAN DESAFÍO DE LAS ESCRITURAS</div>
+    <div class="eyebrow">DESAFÍO BÍBLICO · 2 CORINTIOS</div>
     <h1 class="brand-title"><span>DESAFÍO</span><em>BÍBLICO</em><small>FTU VENEZUELA · 2026</small></h1>
-    <p>15 preguntas. 4 opciones. Un camino hasta el millón de puntos. ¿Cuánto conoces de la Palabra de Dios?</p>
+    <p>15 preguntas de 2 Corintios. 4 opciones por pregunta. Cada respuesta correcta vale 5 puntos. ¡Pon a prueba tu conocimiento!</p>
   </div>
-  <div class="intro-card"><div class="intro-row"><div><small>GRAN PREMIO</small><strong>1.000.000</strong><span>puntos bíblicos</span></div><div class="medal">🏆</div></div><div class="rules"><span>15 preguntas</span><span>3 comodines</span><span>2 niveles seguros</span></div><button class="gold-btn" id="start">COMENZAR JUEGO <b>→</b></button></div>
-  <p class="home-verse">“Procura con diligencia presentarte a Dios aprobado.” <b>2 Timoteo 2:15</b></p>
+  <div class="intro-card"><div class="intro-row"><div><small>PUNTUACIÓN MÁXIMA</small><strong>75</strong><span>puntos · 5 por acierto</span></div><div class="medal">🏆</div></div><div class="rules"><span>Solo 2 Corintios</span><span>5 puntos por acierto</span><span>15 preguntas</span></div><button class="gold-btn" id="start">COMENZAR JUEGO <b>→</b></button></div>
+  <p class="home-verse">Estudia, comprende y pon en práctica la Palabra. <b>2 CORINTIOS · LBLA</b></p>
 </section>
 <section class="screen" id="game">
   <div class="game-head"><button class="exit" id="exit" aria-label="Salir">←</button><div class="game-title">DESAFÍO <b>BÍBLICO FTU 2026</b></div><div class="score-chip">✦ <span id="score">0</span></div></div>
   <div class="game-layout">
     <div class="play-area"><div class="question-meta"><span id="q-number">PREGUNTA 1 DE 15</span><span id="difficulty">FÁCIL</span></div><div class="progress"><i id="progress"></i></div>
-      <article class="question-card"><div class="question-label">DESAFÍO BÍBLICO</div><h2 id="question">Preparando pregunta…</h2><div class="answers" id="answers"></div><div class="feedback" id="feedback" hidden aria-live="polite"><strong id="feedback-title"></strong><p id="explanation"></p><small id="reference"></small><button class="gold-btn" id="continue">CONTINUAR <b>→</b></button></div></article>
+      <article class="question-card"><div class="question-label">2 CORINTIOS · LBLA</div><h2 id="question">Preparando pregunta…</h2><div class="answers" id="answers"></div><div class="feedback" id="feedback" hidden aria-live="polite"><strong id="feedback-title"></strong><p id="explanation"></p><small id="reference"></small><button class="gold-btn" id="continue">CONTINUAR <b>→</b></button></div></article>
       <div class="lifelines"><span>COMODINES</span><button id="fifty">½ <b>50:50</b></button><button id="audience">▥ <b>Público</b></button><button id="friend">☎ <b>Amigo</b></button></div><p class="lifeline-result" id="lifeline-result" aria-live="polite"></p>
     </div>
-    <aside class="ladder"><div class="ladder-head">ESCALERA DE PREMIOS</div><ol id="prize-ladder"></ol><div class="safe-note">★ Niveles seguros: 5 y 10</div></aside>
+    <aside class="ladder"><div class="ladder-head">PUNTOS POR PREGUNTA</div><ol id="prize-ladder"></ol><div class="safe-note">Cada acierto suma 5 puntos</div></aside>
   </div>
 </section>
 <section class="screen" id="end">
  <div class="end-card"><div class="trophy" id="end-icon">🏆</div><div class="eyebrow">PARTIDA FINALIZADA</div><h1 id="end-title">¡Buen trabajo!</h1><p id="end-copy"></p><div class="final-points"><strong id="end-points">0</strong><span>PUNTOS CONSEGUIDOS</span></div><p class="end-reference" id="end-reference"></p><button class="gold-btn" id="again">JUGAR OTRA VEZ ↻</button><button class="plain-btn" id="back-home">VOLVER AL INICIO</button></div>
 </section>
-<footer>FTU 2026 · UN DESAFÍO PARA CONOCER MÁS LA PALABRA DE DIOS</footer>
+<footer>FTU 2026 · DESAFÍO EXCLUSIVO DE 2 CORINTIOS · REFERENCIAS LBLA</footer>
 </main><script src="app.js"></script>
 </body></html>
