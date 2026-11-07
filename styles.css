@@ -45,3 +45,6 @@ body{background:radial-gradient(ellipse at 50% -12%,#087d88 0,transparent 52%),l
 .duel-side.active-turn{border-color:#8cf4f2;box-shadow:0 0 0 2px #12c6d222,0 8px 25px #12c6d222}
 .duel-vs{font-size:12px;font-weight:900;color:#8cf4f2;letter-spacing:1px}
 @media(max-width:560px){.mode-card{padding:18px 15px}.mode-actions{grid-template-columns:1fr}.mode-btn{min-height:44px}.duel-scoreboard{gap:7px}.duel-side{padding:10px 5px}.duel-side small{font-size:8px}.duel-side strong{font-size:22px}}
+
+/* Ocultar el marcador hasta iniciar una partida de dos lados */
+.duel-scoreboard[hidden]{display:none!important}
