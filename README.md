@@ -3,14 +3,7 @@
 Concurso web interactivo de preguntas bíblicas inspirado en el formato de “¿Quién quiere ser millonario?”. Diseño adaptable a computadora, tableta y teléfono.
 
 ## Características
-- 15 preguntas por partida, con orden aleatorio y dificultad progresiva.
-- Cuatro opciones de respuesta y corrección inmediata.
-- Explicación y referencia bíblica después de cada respuesta.
-- Escalera de premios hasta 1.000.000 de puntos.
-- Niveles seguros en las preguntas 5 y 10.
-- Tres comodines: 50:50, ayuda del público (simulada) y consejo de un amigo.
-- Pantalla final con resultados y opción de volver a jugar.
-- No requiere instalación, base de datos ni claves API.
+- 15 preguntas originales basadas exclusivamente en 2 Corintios, con referencias de estudio LBLA. Cada respuesta correcta suma 5 puntos (máximo: 75 puntos).
 
 ## Cómo jugar
 Abre `index.html` en un navegador o publica el repositorio con GitHub Pages. Pulsa **Comenzar juego**, elige una respuesta y utiliza los comodines cuando los necesites.
