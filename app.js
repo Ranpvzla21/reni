@@ -1,5 +1,5 @@
-// Preguntas originales de estudio basadas exclusivamente en 2 Corintios (referencias LBLA).
-// Las explicaciones están parafraseadas; no reproducen el texto de la traducción.
+// Desafío Bíblico FTU 2026 · Preguntas originales basadas exclusivamente en 2 Corintios.
+// Referencias de estudio LBLA. Las explicaciones son paráfrasis, no citas extensas.
 const BANK = [
   {
     "d": 1,
@@ -205,22 +205,149 @@ const BANK = [
     "r": "2 Corintios 13:5"
   }
 ];
-
-const POINTS_PER_QUESTION=5;
-const TOTAL_QUESTIONS=BANK.length;
-const PRIZES=Array.from({length:TOTAL_QUESTIONS},(_,i)=>(i+1)*POINTS_PER_QUESTION);
-const $=id=>document.getElementById(id);
-const state={mode:"single",questions:[],index:0,correct:0,answered:false,used:{fifty:false,audience:false,friend:false},lastCorrect:false,players:[],turn:0,sets:[]};
-function screen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));window.scrollTo({top:0,behavior:"smooth"});}
-function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
-function buildLadder(){ $("prize-ladder").innerHTML=PRIZES.slice(0,state.mode==="single"?TOTAL_QUESTIONS:8).map((p,i)=>'<li data-step="'+i+'"><span>'+(i+1)+'</span><b>'+p+' pts</b></li>').reverse().join("");}
-function resetLifelines(){state.used={fifty:false,audience:false,friend:false};["fifty","audience","friend"].forEach(id=>$(id).disabled=false);$("lifeline-result").textContent="";}
-function start(){state.mode="single";state.questions=shuffle(BANK);state.index=0;state.correct=0;state.answered=false;state.lastCorrect=false;state.players=[];resetLifelines();$("score").textContent="0";$("duel-scoreboard").hidden=true;buildLadder();screen("game");render();}
-function startCompetition(mode){const names=[$("name-one").value.trim()||"Participante 1",$("name-two").value.trim()||"Participante 2"];const picked=shuffle(BANK).slice(0,16);state.mode=mode;state.players=names.map((name)=>({name,score:0,correct:0}));state.sets=[picked.slice(0,8),picked.slice(8,16)];state.turn=0;state.index=0;state.questions=state.sets[0];state.correct=0;state.answered=false;state.lastCorrect=false;resetLifelines();$("duel-scoreboard").hidden=false;$("label-one").textContent=names[0];$("label-two").textContent=names[1];$("duel-score-one").textContent="0";$("duel-score-two").textContent="0";$("side-one").classList.add("active-turn");$("side-two").classList.remove("active-turn");$("score").textContent="0";buildLadder();screen("game");render();}
-function render(){const q=state.questions[state.index];state.answered=false;$("q-number").textContent="PREGUNTA "+(state.index+1)+" DE "+state.questions.length;$("difficulty").textContent=q.d===1?"FÁCIL":q.d===2?"INTERMEDIO":"DIFÍCIL";$("progress").style.width=(state.index/state.questions.length*100)+"%";$("question").textContent=q.q;$("feedback").hidden=true;$("answers").innerHTML=q.o.map((v,i)=>'<button class="answer" data-index="'+i+'"><span>'+String.fromCharCode(65+i)+'</span><b>'+v+'</b></button>').join("");document.querySelectorAll(".answer").forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.index))));document.querySelectorAll("#prize-ladder li").forEach(li=>{li.classList.toggle("current",Number(li.dataset.step)===state.index);li.classList.toggle("passed",Number(li.dataset.step)<state.index);});if(state.mode!=="single"){$("q-number").textContent=state.players[state.turn].name.toUpperCase()+" · PREGUNTA "+(state.index+1)+" DE 8";$("score").textContent=state.players[state.turn].score.toString();}}
-function answer(n){if(state.answered)return;state.answered=true;const q=state.questions[state.index],ok=n===q.a;state.lastCorrect=ok;document.querySelectorAll(".answer").forEach((b,i)=>{b.disabled=true;if(i===q.a)b.classList.add("right");if(i===n&&!ok)b.classList.add("wrong");});if(ok){state.correct++;if(state.mode==="single")$("score").textContent=(state.correct*POINTS_PER_QUESTION).toString();else{state.players[state.turn].correct++;state.players[state.turn].score+=POINTS_PER_QUESTION;$("duel-score-"+(state.turn===0?"one":"two")).textContent=state.players[state.turn].score.toString();$("score").textContent=state.players[state.turn].score.toString();}}$("feedback-title").textContent=ok?"¡Respuesta correcta! +5 puntos":"Respuesta incorrecta";$("feedback-title").className=ok?"good":"bad";$("explanation").textContent=q.e;$("reference").textContent="REFERENCIA: "+q.r;$("continue").textContent=state.mode==="single"?(state.index===state.questions.length-1||!ok?"VER RESULTADO":"SIGUIENTE PREGUNTA →"):(state.index===7?"FINALIZAR TURNO":"SIGUIENTE PREGUNTA →");$("feedback").hidden=false;}
-function finish(){if(state.mode==="single"){const points=state.correct*POINTS_PER_QUESTION,won=state.correct===TOTAL_QUESTIONS;$("end-points").textContent=points.toString();$("end-title").textContent=won?"¡COMPLETASTE 2 CORINTIOS!":state.correct===0?"¡Sigue estudiando 2 Corintios!":"¡Buen esfuerzo!";$("end-copy").textContent="Respondiste correctamente "+state.correct+" de "+TOTAL_QUESTIONS+" preguntas. Cada acierto vale 5 puntos.";$("end-icon").textContent=won?"🏆":"📖";$("end-reference").textContent="Tu puntuación final: "+points+" de "+(TOTAL_QUESTIONS*5)+" puntos.";screen("end");return;}
-const [a,b]=state.players;const winner=a.score===b.score?"¡EMPATE!":a.score>b.score?"¡GANÓ "+a.name.toUpperCase()+"!":"¡GANÓ "+b.name.toUpperCase()+"!";$("end-title").textContent=winner;$("end-icon").textContent=a.score===b.score?"🤝":"🏆";$("end-points").textContent=Math.max(a.score,b.score)+" - "+Math.min(a.score,b.score);$("end-copy").textContent=a.name+": "+a.score+" puntos ("+a.correct+"/8 aciertos). "+b.name+": "+b.score+" puntos ("+b.correct+"/8 aciertos).";$("end-reference").textContent="Cada lado respondió 8 preguntas diferentes de 2 Corintios. Cada acierto vale 5 puntos.";screen("end");}
-function continueGame(){if(!state.answered)return;if(state.mode==="single"){if(!state.lastCorrect||state.index===state.questions.length-1)finish();else{state.index++;render();}return;}if(state.index<7){state.index++;render();return;}if(state.turn===0){state.turn=1;state.index=0;state.questions=state.sets[1];state.correct=0;resetLifelines();$("side-one").classList.remove("active-turn");$("side-two").classList.add("active-turn");buildLadder();render();}else finish();}
-function use(id){if(state.used[id]||state.answered)return;state.used[id]=true;$(id).disabled=true;const q=state.questions[state.index];if(id==="fifty"){const wrong=shuffle(q.o.map((_,i)=>i).filter(i=>i!==q.a)).slice(0,2);document.querySelectorAll(".answer").forEach((b,i)=>{if(wrong.includes(i)){b.disabled=true;b.classList.add("removed");b.querySelector("b").textContent="Opción descartada";}});$("lifeline-result").textContent="Comodín 50:50: dos opciones incorrectas eliminadas.";}else if(id==="audience"){$("lifeline-result").textContent="Votación del público: la opción "+String.fromCharCode(65+q.a)+" recibe la mayoría de votos.";}else{$("lifeline-result").textContent="Tu amigo bíblico aconseja leer con atención y recordar el contexto de 2 Corintios.";} }
-$("start-one").addEventListener("click",start);$("start-duel").addEventListener("click",()=>startCompetition("participants"));$("start-teams").addEventListener("click",()=>startCompetition("teams"));$("again").addEventListener("click",()=>screen("home"));$("back-home").addEventListener("click",()=>screen("home"));$("brand-home").addEventListener("click",e=>{e.preventDefault();screen("home");});$("exit").addEventListener("click",()=>{if(confirm("¿Deseas salir de la partida? Perderás el progreso."))screen("home");});$("continue").addEventListener("click",continueGame);["fifty","audience","friend"].forEach(id=>$(id).addEventListener("click",()=>use(id)));buildLadder();
+const POINTS_PER_QUESTION = 5;
+const TOTAL_QUESTIONS = BANK.length;
+const $ = id => document.getElementById(id);
+const state = {
+  mode: "single", questions: [], index: 0, correct: 0, answered: false,
+  used: { fifty:false, audience:false, friend:false }, lastCorrect:false,
+  players: [], turn:0, round:0, sets:[], totalAnswered:0
+};
+function screen(id){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function shuffle(items){
+  const a=[...items];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+function resetLifelines(){
+  state.used={fifty:false,audience:false,friend:false};
+  ["fifty","audience","friend"].forEach(id=>{const el=$(id);if(el)el.disabled=false;});
+  $("lifeline-result").textContent="";
+}
+function buildLadder(){
+  const count=state.mode==="single"?TOTAL_QUESTIONS:8;
+  $("prize-ladder").innerHTML=Array.from({length:count},(_,i)=>i+1).reverse()
+    .map(n=>'<li data-step="'+(n-1)+'"><span>'+n+'</span><b>'+(n*POINTS_PER_QUESTION)+' pts</b></li>').join("");
+}
+function startSingle(){
+  state.mode="single";state.questions=shuffle(BANK);state.index=0;state.correct=0;
+  state.answered=false;state.lastCorrect=false;state.players=[];state.totalAnswered=0;
+  resetLifelines();$("score").textContent="0";$("duel-scoreboard").hidden=true;
+  buildLadder();screen("game");render();
+}
+function startCompetition(mode){
+  const names=[$("name-one").value.trim()||"Participante 1",$("name-two").value.trim()||"Participante 2"];
+  const picked=shuffle(BANK);
+  if(picked.length<16){alert("Se necesitan al menos 16 preguntas para esta modalidad.");return;}
+  state.mode=mode;
+  state.players=names.map(name=>({name,score:0,correct:0}));
+  state.sets=[picked.slice(0,8),picked.slice(8,16)];
+  state.turn=0;state.round=0;state.totalAnswered=0;state.answered=false;state.lastCorrect=false;
+  state.questions=state.sets[0];state.correct=0;
+  $("duel-scoreboard").hidden=false;
+  $("label-one").textContent=names[0];$("label-two").textContent=names[1];
+  $("duel-score-one").textContent="0";$("duel-score-two").textContent="0";
+  $("side-one").classList.add("active-turn");$("side-two").classList.remove("active-turn");
+  $("score").textContent="0";resetLifelines();buildLadder();screen("game");render();
+}
+function currentQuestion(){
+  return state.mode==="single"?state.questions[state.index]:state.sets[state.turn][state.round];
+}
+function render(){
+  const q=currentQuestion();state.answered=false;
+  const questionNo=state.mode==="single"?state.index+1:state.round+1;
+  const total=state.mode==="single"?TOTAL_QUESTIONS:8;
+  $("q-number").textContent=state.mode==="single"?"PREGUNTA "+questionNo+" DE "+total:
+    state.players[state.turn].name.toUpperCase()+" · TURNO "+(state.turn+1)+" · PREGUNTA "+questionNo+" DE 8";
+  $("difficulty").textContent=q.d===1?"FÁCIL":q.d===2?"INTERMEDIO":"DIFÍCIL";
+  $("progress").style.width=((state.mode==="single"?state.index:state.totalAnswered)/ (state.mode==="single"?TOTAL_QUESTIONS:16)*100)+"%";
+  $("question").textContent=q.q;$("feedback").hidden=true;$("lifeline-result").textContent="";
+  $("answers").innerHTML=q.o.map((v,i)=>'<button class="answer" data-index="'+i+'"><span>'+String.fromCharCode(65+i)+'</span><b>'+v+'</b></button>').join("");
+  document.querySelectorAll(".answer").forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.index))));
+  const ladderStep=state.mode==="single"?state.index:state.round;
+  document.querySelectorAll("#prize-ladder li").forEach(li=>{
+    const step=Number(li.dataset.step);li.classList.toggle("current",step===ladderStep);
+    li.classList.toggle("passed",step<ladderStep);
+  });
+  if(state.mode!=="single"){
+    $("score").textContent=state.players[state.turn].score;
+    $("side-one").classList.toggle("active-turn",state.turn===0);
+    $("side-two").classList.toggle("active-turn",state.turn===1);
+  }else $("score").textContent=String(state.correct*POINTS_PER_QUESTION);
+}
+function answer(n){
+  if(state.answered)return;state.answered=true;
+  const q=currentQuestion(),ok=n===q.a;state.lastCorrect=ok;
+  document.querySelectorAll(".answer").forEach((b,i)=>{
+    b.disabled=true;if(i===q.a)b.classList.add("right");if(i===n&&!ok)b.classList.add("wrong");
+  });
+  if(ok){
+    if(state.mode==="single")state.correct++;
+    else{state.players[state.turn].correct++;state.players[state.turn].score+=POINTS_PER_QUESTION;
+      $("duel-score-"+(state.turn===0?"one":"two")).textContent=state.players[state.turn].score;}
+  }
+  $("score").textContent=state.mode==="single"?String(state.correct*POINTS_PER_QUESTION):String(state.players[state.turn].score);
+  $("feedback-title").textContent=ok?"¡Respuesta correcta! +5 puntos":"Respuesta incorrecta";
+  $("feedback-title").className=ok?"good":"bad";
+  $("explanation").textContent=q.e;$("reference").textContent="REFERENCIA: "+q.r;
+  $("continue").textContent=state.mode==="single"?
+    (state.index===TOTAL_QUESTIONS-1||!ok?"VER RESULTADO":"SIGUIENTE PREGUNTA →"):
+    (state.totalAnswered===15?"VER GANADOR":"SIGUIENTE TURNO →");
+  $("feedback").hidden=false;
+}
+function finish(){
+  if(state.mode==="single"){
+    const points=state.correct*POINTS_PER_QUESTION;
+    $("end-title").textContent=state.correct===TOTAL_QUESTIONS?"¡COMPLETASTE 2 CORINTIOS!":state.correct===0?"¡Sigue estudiando 2 Corintios!":"¡Buen esfuerzo!";
+    $("end-icon").textContent=state.correct===TOTAL_QUESTIONS?"🏆":"📖";
+    $("end-points").textContent=String(points);
+    $("end-copy").textContent="Respondiste correctamente "+state.correct+" de "+TOTAL_QUESTIONS+" preguntas. Cada acierto vale 5 puntos.";
+    $("end-reference").textContent="Puntuación final: "+points+" de "+(TOTAL_QUESTIONS*POINTS_PER_QUESTION)+" puntos.";
+    screen("end");return;
+  }
+  const [a,b]=state.players;
+  const title=a.score===b.score?"¡EMPATE!":a.score>b.score?"¡GANÓ "+a.name.toUpperCase()+"!":"¡GANÓ "+b.name.toUpperCase()+"!";
+  $("end-title").textContent=title;$("end-icon").textContent=a.score===b.score?"🤝":"🏆";
+  $("end-points").textContent=a.score+" - "+b.score;
+  $("end-copy").textContent=a.name+": "+a.score+" puntos ("+a.correct+"/8 aciertos). "+b.name+": "+b.score+" puntos ("+b.correct+"/8 aciertos).";
+  $("end-reference").textContent="Cada participante/equipo respondió 8 preguntas diferentes, alternando un turno cada uno. Cada acierto vale 5 puntos.";
+  screen("end");
+}
+function continueGame(){
+  if(!state.answered)return;
+  if(state.mode==="single"){
+    if(!state.lastCorrect||state.index===TOTAL_QUESTIONS-1)finish();
+    else{state.index++;resetLifelines();render();}
+    return;
+  }
+  state.totalAnswered++;
+  if(state.totalAnswered>=16){finish();return;}
+  if(state.turn===0)state.turn=1;
+  else{state.turn=0;state.round++;}
+  resetLifelines();render();
+}
+function useLifeline(id){
+  if(state.used[id]||state.answered)return;state.used[id]=true;$(id).disabled=true;
+  const q=currentQuestion();
+  if(id==="fifty"){
+    const wrong=shuffle(q.o.map((_,i)=>i).filter(i=>i!==q.a)).slice(0,2);
+    document.querySelectorAll(".answer").forEach((b,i)=>{if(wrong.includes(i)){b.disabled=true;b.classList.add("removed");b.querySelector("b").textContent="Opción descartada";}});
+    $("lifeline-result").textContent="50:50: se eliminaron dos opciones incorrectas.";
+  }else if(id==="audience"){
+    $("lifeline-result").textContent="El público considera más probable la opción "+String.fromCharCode(65+q.a)+".";
+  }else $("lifeline-result").textContent="Consejo: lee con atención y recuerda el contexto de 2 Corintios.";
+}
+function goHome(){screen("home");}
+function bind(id,event,fn){const el=$(id);if(el)el.addEventListener(event,fn);}
+bind("start","click",startSingle);bind("start-one","click",startSingle);
+bind("start-duel","click",()=>startCompetition("participants"));
+bind("start-teams","click",()=>startCompetition("teams"));
+bind("again","click",goHome);bind("back-home","click",goHome);
+bind("brand-home","click",e=>{e.preventDefault();goHome();});
+bind("exit","click",()=>{if(confirm("¿Deseas salir de la partida? Perderás el progreso."))goHome();});
+bind("continue","click",continueGame);
+["fifty","audience","friend"].forEach(id=>bind(id,"click",()=>useLifeline(id)));
+buildLadder();
