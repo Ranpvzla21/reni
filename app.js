@@ -211,7 +211,7 @@ const $ = id => document.getElementById(id);
 const state = {
   mode: "single", questions: [], index: 0, correct: 0, answered: false,
   used: { fifty:false, audience:false, friend:false }, lastCorrect:false,
-  players: [], turn:0, round:0, sets:[], totalAnswered:0
+  players: [], soloName:"", turn:0, round:0, sets:[], totalAnswered:0
 };
 function screen(id){
   document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));
@@ -233,6 +233,7 @@ function buildLadder(){
     .map(n=>'<li data-step="'+(n-1)+'"><span>'+n+'</span><b>'+(n*POINTS_PER_QUESTION)+' pts</b></li>').join("");
 }
 function startSingle(){
+  state.soloName=$("name-one").value.trim()||"Participante";
   state.mode="single";state.questions=shuffle(BANK);state.index=0;state.correct=0;
   state.answered=false;state.lastCorrect=false;state.players=[];state.totalAnswered=0;
   resetLifelines();$("score").textContent="0";$("duel-scoreboard").hidden=true;
@@ -240,7 +241,7 @@ function startSingle(){
 }
 function startCompetition(mode){
   const defaults=mode==="teams"?["Equipo 1","Equipo 2"]:["Participante 1","Participante 2"];
-  const names=[$("name-one").value.trim(),$("name-two").value.trim()].map((name,i)=>!name||name===("Participante "+(i+1))?defaults[i]:name);
+  const names=[$("name-one").value.trim(),$("name-two").value.trim()].map((name,i)=>name||defaults[i]);
   const picked=shuffle(BANK);
   if(picked.length<16){alert("Se necesitan al menos 16 preguntas para esta modalidad.");return;}
   state.mode=mode;
@@ -261,7 +262,7 @@ function render(){
   const q=currentQuestion();state.answered=false;
   const questionNo=state.mode==="single"?state.index+1:state.round+1;
   const total=state.mode==="single"?TOTAL_QUESTIONS:8;
-  $("q-number").textContent=state.mode==="single"?"PREGUNTA "+questionNo+" DE "+total:
+  $("q-number").textContent=state.mode==="single"?state.soloName.toUpperCase()+" · PREGUNTA "+questionNo+" DE "+total:
     state.players[state.turn].name.toUpperCase()+" · TURNO "+(state.turn+1)+" · PREGUNTA "+questionNo+" DE 8";
   $("difficulty").textContent=q.d===1?"FÁCIL":q.d===2?"INTERMEDIO":"DIFÍCIL";
   $("progress").style.width=((state.mode==="single"?state.index:state.totalAnswered)/ (state.mode==="single"?TOTAL_QUESTIONS:16)*100)+"%";
@@ -305,7 +306,7 @@ function finish(){
     $("end-title").textContent=state.correct===TOTAL_QUESTIONS?"¡COMPLETASTE 2 CORINTIOS!":state.correct===0?"¡Sigue estudiando 2 Corintios!":"¡Buen esfuerzo!";
     $("end-icon").textContent=state.correct===TOTAL_QUESTIONS?"🏆":"📖";
     $("end-points").textContent=String(points);
-    $("end-copy").textContent="Respondiste correctamente "+state.correct+" de "+TOTAL_QUESTIONS+" preguntas. Cada acierto vale 5 puntos.";
+    $("end-copy").textContent=state.soloName+", respondiste correctamente "+state.correct+" de "+TOTAL_QUESTIONS+" preguntas. Cada acierto vale 5 puntos.";
     $("end-reference").textContent="Puntuación final: "+points+" de "+(TOTAL_QUESTIONS*POINTS_PER_QUESTION)+" puntos.";
     screen("end");return;
   }
@@ -342,10 +343,20 @@ function useLifeline(id){
   }else $("lifeline-result").textContent="Consejo: lee con atención y recuerda el contexto de 2 Corintios.";
 }
 function goHome(){screen("home");}
+function setNameLabels(mode){
+  const team=mode==="teams";
+  $("name-one-label").firstChild.textContent=team?"Nombre del equipo 1":"Nombre del participante 1";
+  $("name-two-label").firstChild.textContent=team?"Nombre del equipo 2":"Nombre del participante 2";
+  $("name-one").placeholder=team?"Escribe el nombre del equipo 1":"Escribe el nombre del participante 1";
+  $("name-two").placeholder=team?"Escribe el nombre del equipo 2":"Escribe el nombre del participante 2";
+}
 function bind(id,event,fn){const el=$(id);if(el)el.addEventListener(event,fn);}
 bind("start","click",startSingle);bind("start-one","click",startSingle);
 bind("start-duel","click",()=>startCompetition("participants"));
 bind("start-teams","click",()=>startCompetition("teams"));
+bind("start-one","click",()=>setNameLabels("participants"));
+bind("start-duel","click",()=>setNameLabels("participants"));
+bind("start-teams","click",()=>setNameLabels("teams"));
 bind("again","click",goHome);bind("back-home","click",goHome);
 bind("brand-home","click",e=>{e.preventDefault();goHome();});
 bind("exit","click",()=>{if(confirm("¿Deseas salir de la partida? Perderás el progreso."))goHome();});
