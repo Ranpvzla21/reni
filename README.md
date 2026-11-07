@@ -3,7 +3,13 @@
 Concurso web interactivo de preguntas bíblicas inspirado en el formato de “¿Quién quiere ser millonario?”. Diseño adaptable a computadora, tableta y teléfono.
 
 ## Características
-- 15 preguntas originales basadas exclusivamente en 2 Corintios, con referencias de estudio LBLA. Cada respuesta correcta suma 5 puntos (máximo: 75 puntos).
+- Concurso bíblico exclusivo de 2 Corintios, con referencias de estudio LBLA.
+- 16 preguntas por partida individual.
+- Modo individual, dos participantes o dos equipos.
+- En competencia, cada lado recibe 8 preguntas distintas y no se repiten entre ambos.
+- 5 puntos por respuesta correcta; máximo individual de 80 puntos o 40 por lado en competencia.
+- Tres comodines: 50:50, público y amigo.
+- Diseño adaptable a móviles y escritorio con identidad visual FTU Venezuela 2026.
 
 ## Cómo jugar
 Abre `index.html` en un navegador o publica el repositorio con GitHub Pages. Pulsa **Comenzar juego**, elige una respuesta y utiliza los comodines cuando los necesites.
