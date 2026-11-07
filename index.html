@@ -19,7 +19,7 @@
     <h1 class="brand-title"><span>DESAFÍO</span><em>BÍBLICO</em><small>FTU VENEZUELA · 2026</small></h1>
     <p>16 preguntas de 2 Corintios. 4 opciones por pregunta. Cada respuesta correcta vale 5 puntos. ¡Pon a prueba tu conocimiento!</p>
   </div>
-  <div class="intro-card"><div class="intro-row"><div><small>PUNTUACIÓN MÁXIMA</small><strong>80</strong><span>puntos · 5 por acierto</span></div><div class="medal">🏆</div></div><div class="rules"><span>Solo 2 Corintios</span><span>5 puntos por acierto</span><span>16 preguntas</span></div><button class="gold-btn" id="start">COMENZAR JUEGO <b>→</b></button></div>
+  <div class="intro-card"><div class="intro-row"><div><small>PUNTUACIÓN MÁXIMA</small><strong>80</strong><span>puntos · 5 por acierto</span></div><div class="medal">🏆</div></div><div class="rules"><span>Solo 2 Corintios</span><span>5 puntos por acierto</span><span>16 preguntas</span></div><button class="gold-btn" id="start">JUGAR SOLO <b>→</b></button></div>
   <div class="mode-card">
     <div class="mode-title">ELIGE TU MODALIDAD</div>
     <label class="name-label">Nombre del participante / equipo 1<input id="name-one" maxlength="24" value="Participante 1"></label>
@@ -29,14 +29,14 @@
       <button class="mode-btn featured" id="start-duel">DOS PARTICIPANTES</button>
       <button class="mode-btn featured" id="start-teams">DOS EQUIPOS</button>
     </div>
-    <p class="mode-note">En la competencia, cada participante o equipo recibe 8 preguntas diferentes. Gana quien consiga más puntos.</p>
+    <p class="mode-note">En las modalidades de dos participantes o dos equipos, cada uno recibe 8 preguntas diferentes. Los turnos se alternan: juega el 1, luego el 2, y así sucesivamente hasta completar las 16 preguntas. Cada acierto vale 5 puntos. Al final se anuncia el ganador o empate.</p>
   </div>
   <p class="home-verse">Estudia, comprende y pon en práctica la Palabra. <b>2 CORINTIOS · LBLA</b></p>
 </section>
 <section class="screen" id="game">
-  <div class="game-head"><button class="exit" id="exit" aria-label="Salir">←</button><div class="game-title">DESAFÍO <b>BÍBLICO FTU 2026</b></div><div class="score-chip">✦ <span id="score">0</span></div></div>
+  <div class="game-head"><button class="exit" id="exit" aria-label="Salir">←</button><div class="game-title">DESAFÍO <b>2 CORINTIOS · LBLA</b></div><div class="score-chip">✦ <span id="score">0</span></div></div>
   <div class="duel-scoreboard" id="duel-scoreboard" hidden><div class="duel-side" id="side-one"><small id="label-one">PARTICIPANTE 1</small><strong id="duel-score-one">0</strong></div><div class="duel-vs">VS</div><div class="duel-side" id="side-two"><small id="label-two">PARTICIPANTE 2</small><strong id="duel-score-two">0</strong></div></div><div class="game-layout">
-    <div class="play-area"><div class="question-meta"><span id="q-number">PREGUNTA 1 DE 15</span><span id="difficulty">FÁCIL</span></div><div class="progress"><i id="progress"></i></div>
+    <div class="play-area"><div class="question-meta"><span id="q-number">PREGUNTA 1 DE 16</span><span id="difficulty">FÁCIL</span></div><div class="progress"><i id="progress"></i></div>
       <article class="question-card"><div class="question-label">2 CORINTIOS · LBLA</div><h2 id="question">Preparando pregunta…</h2><div class="answers" id="answers"></div><div class="feedback" id="feedback" hidden aria-live="polite"><strong id="feedback-title"></strong><p id="explanation"></p><small id="reference"></small><button class="gold-btn" id="continue">CONTINUAR <b>→</b></button></div></article>
       <div class="lifelines"><span>COMODINES</span><button id="fifty">½ <b>50:50</b></button><button id="audience">▥ <b>Público</b></button><button id="friend">☎ <b>Amigo</b></button></div><p class="lifeline-result" id="lifeline-result" aria-live="polite"></p>
     </div>
