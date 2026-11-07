@@ -33,3 +33,7 @@ Las preguntas incluyen referencias para consultar los pasajes bíblicos. El como
 - Al terminar las 16 preguntas de la competencia, la aplicación compara los puntos y anuncia al ganador o un empate.
 - Cada respuesta correcta suma **5 puntos**. En la competencia, cada participante/equipo puede obtener hasta 40 puntos.
 - Las preguntas son de elaboración propia y contienen referencias de estudio a 2 Corintios en LBLA; las explicaciones son paráfrasis.
+
+
+### Nombres personalizados
+Antes de comenzar, escribe el nombre de cada participante o equipo en los campos editables. Si dejas un campo vacío, la aplicación asigna un nombre predeterminado. En el modo individual puedes escribir tu nombre en el primer campo.
