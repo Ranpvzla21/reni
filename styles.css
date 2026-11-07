@@ -25,3 +25,23 @@ body{background:radial-gradient(ellipse at 50% -12%,#087d88 0,transparent 52%),l
 .ladder li.current{background:#12c6d2;color:#062126}
 .ladder li.current span{color:#062126}
 @media(max-width:720px){.hero-cover{max-height:260px;border-radius:12px;margin-bottom:22px}.hero{padding:0 0 22px}.hero .brand-title{font-size:clamp(40px,12vw,58px)}}
+
+/* Modos de competición: individual, dos participantes o dos equipos */
+.mode-card{max-width:650px;margin:22px auto 0;padding:22px 26px;border:1px solid #13c6d255;border-radius:16px;background:linear-gradient(145deg,#123b41,#0c252a);box-shadow:0 18px 42px #0005}
+.mode-title{font-size:10px;letter-spacing:2px;font-weight:800;color:var(--gold);margin-bottom:16px}
+.name-label{display:block;color:var(--muted);font-size:11px;margin:12px 0}
+.name-label input{display:block;width:100%;margin-top:7px;padding:12px 13px;border-radius:8px;border:1px solid #12c6d255;background:#061b20;color:#fff;font:600 13px 'DM Sans',sans-serif;outline:none}
+.name-label input:focus{border-color:#8cf4f2}
+.mode-actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-top:18px}
+.mode-btn{min-height:48px;padding:10px 8px;border:1px solid #12c6d277;border-radius:8px;background:#12c6d21a;color:#c9faff;font:800 10px 'DM Sans',sans-serif;letter-spacing:.5px;cursor:pointer}
+.mode-btn.featured{background:linear-gradient(100deg,#08aebc,#8cf4f2);color:#062126;border:0}
+.mode-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #12c6d233}
+.mode-note{font-size:11px;line-height:1.6;color:var(--muted);margin:14px 0 0}
+.duel-scoreboard{display:flex;align-items:center;justify-content:center;gap:15px;margin:0 auto 22px;max-width:620px}
+.duel-side{flex:1;text-align:center;padding:13px 10px;border:1px solid #12c6d255;border-radius:12px;background:#09272d}
+.duel-side small,.duel-side strong{display:block}
+.duel-side small{font-size:10px;letter-spacing:1px;color:var(--muted);font-weight:800;overflow-wrap:anywhere}
+.duel-side strong{font-size:26px;color:#8cf4f2;margin-top:4px}
+.duel-side.active-turn{border-color:#8cf4f2;box-shadow:0 0 0 2px #12c6d222,0 8px 25px #12c6d222}
+.duel-vs{font-size:12px;font-weight:900;color:#8cf4f2;letter-spacing:1px}
+@media(max-width:560px){.mode-card{padding:18px 15px}.mode-actions{grid-template-columns:1fr}.mode-btn{min-height:44px}.duel-scoreboard{gap:7px}.duel-side{padding:10px 5px}.duel-side small{font-size:8px}.duel-side strong{font-size:22px}}
