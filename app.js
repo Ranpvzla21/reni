@@ -352,11 +352,8 @@ function setNameLabels(mode){
 }
 function bind(id,event,fn){const el=$(id);if(el)el.addEventListener(event,fn);}
 bind("start","click",startSingle);bind("start-one","click",startSingle);
-bind("start-duel","click",()=>startCompetition("participants"));
-bind("start-teams","click",()=>startCompetition("teams"));
-bind("start-one","click",()=>setNameLabels("participants"));
-bind("start-duel","click",()=>setNameLabels("participants"));
-bind("start-teams","click",()=>setNameLabels("teams"));
+bind("start-duel","click",()=>{setNameLabels("participants");startCompetition("participants");});
+bind("start-teams","click",()=>{setNameLabels("teams");startCompetition("teams");});
 bind("again","click",goHome);bind("back-home","click",goHome);
 bind("brand-home","click",e=>{e.preventDefault();goHome();});
 bind("exit","click",()=>{if(confirm("¿Deseas salir de la partida? Perderás el progreso."))goHome();});
