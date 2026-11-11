@@ -1,39 +1,34 @@
 # Desafío Bíblico FTU 2026
 
-Concurso web interactivo de preguntas bíblicas inspirado en el formato de “¿Quién quiere ser millonario?”. Diseño adaptable a computadora, tableta y teléfono.
+Juego web de preguntas bíblicas inspirado en el formato de concurso de televisión «¿Quién quiere ser millonario?», con identidad FTU Venezuela 2026.
 
-## Características
+## Contenido y modalidades
 
-- Concurso bíblico dedicado exclusivamente al libro de **2 Corintios**, con referencias de estudio LBLA.
-- 16 preguntas con cuatro opciones y explicación al responder.
-- 5 puntos por cada respuesta correcta.
-- Modalidad individual, dos participantes o dos equipos.
-- En la competición de dos lados, cada lado recibe 8 preguntas distintas (sin repetir entre ellos), con turnos intercalados hasta completar las 16 preguntas.
-- Marcador en vivo y anuncio automático del ganador o empate al finalizar.
-- Comodines 50:50, público y amigo.
-- Diseño adaptable con identidad visual FTU Venezuela 2026.
+- Banco de **40 preguntas diferentes**, elaboradas sobre el libro de **2 Corintios**, con referencias de estudio LBLA.
+- Cada partida individual presenta 15 preguntas seleccionadas al azar y ordenadas por dificultad: 5 fáciles, 5 intermedias y 5 difíciles.
+- En modalidad de dos participantes o dos equipos, cada lado recibe 8 preguntas diferentes, sin repetición entre participantes, con turnos alternados hasta completar las 16.
+- Cada respuesta correcta vale **5 puntos**.
+- Escalera visual de premios por etapas: 25 puntos (etapa 1), 50 puntos (etapa 2) y 75 puntos (gran final). La aplicación anuncia cuando se alcanza cada etapa.
+- Comodines: 50:50, público (simulado) y amigo (pista).
+- Al finalizar la competición, se muestra una pantalla especial con el ganador o el empate y el marcador de ambos lados.
+- Los nombres de participantes y equipos se pueden escribir antes de comenzar cada partida.
 
-## Cómo jugar
-Abre `index.html` en un navegador o publica el repositorio con GitHub Pages. Pulsa **Comenzar juego**, elige una respuesta y utiliza los comodines cuando los necesites.
+## Jugar desde un teléfono
 
-## Publicar con GitHub Pages
+La interfaz se adapta a pantallas pequeñas, con botones táctiles grandes y lectura vertical.
+
+La aplicación incluye un manifiesto web y un service worker para poder instalarla en dispositivos compatibles y conservar los archivos principales para uso sin conexión después de la primera carga.
+
+- **Android / Chrome:** abre el sitio publicado, toca el menú del navegador y selecciona «Instalar aplicación» o «Añadir a pantalla de inicio». Si aparece el botón «Instalar en mi teléfono», también puedes usarlo.
+- **iPhone / Safari:** abre el sitio, toca «Compartir» y elige «Añadir a pantalla de inicio».
+
+## Publicación con GitHub Pages
+
 1. Abre **Settings → Pages** en este repositorio.
 2. En **Build and deployment**, selecciona **Deploy from a branch**.
 3. Elige la rama `main` y la carpeta `/(root)`.
 4. Guarda y espera a que GitHub publique el sitio.
 
-Las preguntas incluyen referencias para consultar los pasajes bíblicos. El comodín del público es una simulación y el consejo del amigo es una pista recreativa, no una consulta real.
+## Sobre las preguntas y comodines
 
-
-## Modalidades de juego
-
-- **Jugar solo:** hasta 16 preguntas de 2 Corintios.
-- **Dos participantes:** introduce los nombres y compite por turnos alternados.
-- **Dos equipos:** cada equipo responde 8 preguntas diferentes; los turnos se alternan una pregunta a la vez.
-- Al terminar las 16 preguntas de la competencia, la aplicación compara los puntos y anuncia al ganador o un empate.
-- Cada respuesta correcta suma **5 puntos**. En la competencia, cada participante/equipo puede obtener hasta 40 puntos.
-- Las preguntas son de elaboración propia y contienen referencias de estudio a 2 Corintios en LBLA; las explicaciones son paráfrasis.
-
-
-### Nombres personalizados
-Antes de comenzar, escribe el nombre de cada participante o equipo en los campos editables. Si dejas un campo vacío, la aplicación asigna un nombre predeterminado. En el modo individual puedes escribir tu nombre en el primer campo.
+Las preguntas son de elaboración propia y están acompañadas por referencias para consultar los pasajes en la Biblia LBLA. Las explicaciones son paráfrasis, no citas extensas. El comodín del público es una simulación y el consejo del amigo es una pista recreativa, no una consulta real.
