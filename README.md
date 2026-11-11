@@ -4,9 +4,9 @@ Juego web de preguntas bíblicas inspirado en el formato de concurso de televisi
 
 ## Contenido y modalidades
 
-- Banco de **40 preguntas diferentes**, elaboradas sobre el libro de **2 Corintios**, con referencias de estudio LBLA.
-- Cada partida individual presenta 15 preguntas seleccionadas al azar y ordenadas por dificultad: 5 fáciles, 5 intermedias y 5 difíciles.
-- En modalidad de dos participantes o dos equipos, cada lado recibe 8 preguntas diferentes, sin repetición entre participantes, con turnos alternados hasta completar las 16.
+- Banco de **60 preguntas diferentes**: 40 de selección múltiple y 20 de Verdadero o Falso, mezcladas en cada partida., elaboradas sobre el libro de **2 Corintios**, con referencias de estudio LBLA.
+- Cada partida individual presenta 15 preguntas seleccionadas al azar (9 de selección múltiple y 6 de Verdadero o Falso) y ordenadas por dificultad: 5 fáciles, 5 intermedias y 5 difíciles.
+- En modalidad de dos participantes o dos equipos, cada lado recibe 8 preguntas diferentes, mezclando 4 de selección múltiple y 4 de Verdadero o Falso, sin repetición entre participantes, con turnos alternados hasta completar las 16.
 - Cada respuesta correcta vale **5 puntos**.
 - Escalera visual de premios por etapas: 25 puntos (etapa 1), 50 puntos (etapa 2) y 75 puntos (gran final). La aplicación anuncia cuando se alcanza cada etapa.
 - Comodines: 50:50, público (simulado) y amigo (pista).
