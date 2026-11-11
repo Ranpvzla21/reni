@@ -607,9 +607,11 @@ function answer(n){
       $("duel-score-"+(state.turn===0?"one":"two")).textContent=state.players[state.turn].score;}
   }
   $("score").textContent=state.mode==="single"?String(state.correct*POINTS_PER_QUESTION):String(state.players[state.turn].score);
-  $("feedback-title").textContent=ok?"¡Respuesta correcta! +5 puntos":"Respuesta incorrecta";
+  const stageReached=state.mode==="single"&&ok?STAGES.find(stage=>stage.at===state.correct):null;
+  $("feedback-title").textContent=stageReached?"¡ETAPA SUPERADA! "+stageReached.label:ok?"¡Respuesta correcta! +5 puntos":"Respuesta incorrecta";
+
   $("feedback-title").className=ok?"good":"bad";
-  $("explanation").textContent=q.e;$("reference").textContent="REFERENCIA: "+q.r;
+  $("explanation").textContent=q.e+(stageReached?" Has asegurado la etapa de "+(state.correct*POINTS_PER_QUESTION)+" puntos. ¡Sigue avanzando!":"");$("reference").textContent="REFERENCIA: "+q.r;
   $("continue").textContent=state.mode==="single"?
     (state.index===SOLO_QUESTIONS-1||!ok?"VER RESULTADO":"SIGUIENTE PREGUNTA →"):
     (state.totalAnswered===15?"VER GANADOR":"SIGUIENTE TURNO →");
