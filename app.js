@@ -203,10 +203,325 @@ const BANK = [
     "a": 0,
     "e": "Pablo llama a examinarse para comprobar que uno está en la fe y reconocer que Jesucristo está en nosotros.",
     "r": "2 Corintios 13:5"
+  },
+  {
+    "d": 1,
+    "q": "¿Qué afirma Pablo acerca de las promesas de Dios?",
+    "o": [
+      "Que son inciertas",
+      "Que en Cristo son sí y amén",
+      "Que dependen de la riqueza",
+      "Que solo fueron para Israel"
+    ],
+    "a": 1,
+    "e": "Pablo enseña que las promesas de Dios encuentran su afirmación en Cristo.",
+    "r": "2 Corintios 1:20"
+  },
+  {
+    "d": 1,
+    "q": "¿Qué actitud dice Pablo que tuvo al visitar a los corintios?",
+    "o": [
+      "Tristeza y dureza en todo momento",
+      "Alegría y sencillez absoluta",
+      "No quiso volver con tristeza",
+      "Buscó imponerse por fuerza"
+    ],
+    "a": 2,
+    "e": "Pablo explica que evitó una visita que pudiera producir tristeza y quiso tratarles con amor.",
+    "r": "2 Corintios 2:1-4"
+  },
+  {
+    "d": 1,
+    "q": "¿Quién hace a los creyentes competentes para servir al nuevo pacto?",
+    "o": [
+      "La capacidad humana",
+      "Dios",
+      "La tradición",
+      "La elocuencia"
+    ],
+    "a": 1,
+    "e": "La suficiencia para este ministerio procede de Dios, no de la capacidad humana.",
+    "r": "2 Corintios 3:5-6"
+  },
+  {
+    "d": 1,
+    "q": "¿Qué dice Pablo que ocurre donde está el Espíritu del Señor?",
+    "o": [
+      "Hay libertad",
+      "Hay temor permanente",
+      "No hay transformación",
+      "Desaparece la esperanza"
+    ],
+    "a": 0,
+    "e": "Pablo afirma que donde está el Espíritu del Señor hay libertad.",
+    "r": "2 Corintios 3:17"
+  },
+  {
+    "d": 1,
+    "q": "¿Qué predicaban Pablo y sus colaboradores?",
+    "o": [
+      "A sí mismos como señores",
+      "A Jesucristo como Señor",
+      "La sabiduría de este mundo",
+      "La superioridad de los apóstoles"
+    ],
+    "a": 1,
+    "e": "El centro de la proclamación apostólica era Jesucristo como Señor.",
+    "r": "2 Corintios 4:5"
+  },
+  {
+    "d": 1,
+    "q": "¿Qué renunció Pablo a hacer en su ministerio?",
+    "o": [
+      "A la verdad",
+      "A la oración",
+      "A las cosas ocultas y vergonzosas",
+      "A anunciar a Cristo"
+    ],
+    "a": 2,
+    "e": "Pablo describe un ministerio transparente que no manipula ni adultera la palabra de Dios.",
+    "r": "2 Corintios 4:2"
+  },
+  {
+    "d": 1,
+    "q": "¿Qué espera el creyente según la enseñanza sobre la morada celestial?",
+    "o": [
+      "Una morada eterna de Dios",
+      "Una casa hecha por manos humanas",
+      "Un reino temporal",
+      "Una vida sin responsabilidad"
+    ],
+    "a": 0,
+    "e": "Pablo habla de una morada eterna en los cielos, no hecha por manos humanas.",
+    "r": "2 Corintios 5:1"
+  },
+  {
+    "d": 1,
+    "q": "¿Qué impulsa a los mensajeros de Cristo?",
+    "o": [
+      "El deseo de fama",
+      "El amor de Cristo",
+      "La rivalidad",
+      "El temor a las personas"
+    ],
+    "a": 1,
+    "e": "Pablo declara que el amor de Cristo es el motivo que gobierna su servicio.",
+    "r": "2 Corintios 5:14"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué recomienda Pablo a los creyentes respecto a la gracia recibida?",
+    "o": [
+      "Recibirla en vano",
+      "No recibirla en vano",
+      "Guardarla en secreto",
+      "Cambiarla por méritos"
+    ],
+    "a": 1,
+    "e": "Pablo exhorta a no recibir en vano la gracia de Dios.",
+    "r": "2 Corintios 6:1"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué invitación hace Pablo respecto a la relación con los incrédulos?",
+    "o": [
+      "Unirse en yugo desigual",
+      "No unirse en yugo desigual",
+      "Evitar toda conversación",
+      "Buscar poder político"
+    ],
+    "a": 1,
+    "e": "Pablo exhorta a no formar un yugo desigual y llama a vivir en santidad.",
+    "r": "2 Corintios 6:14-18"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué produce la tristeza conforme a la voluntad de Dios?",
+    "o": [
+      "Muerte sin esperanza",
+      "Arrepentimiento para salvación",
+      "Orgullo",
+      "Indiferencia"
+    ],
+    "a": 1,
+    "e": "La tristeza conforme a Dios produce arrepentimiento que conduce a la salvación.",
+    "r": "2 Corintios 7:10"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué ejemplo de generosidad menciona Pablo entre las iglesias?",
+    "o": [
+      "Las iglesias de Macedonia",
+      "Los comerciantes de Corinto",
+      "Los soldados romanos",
+      "Los habitantes de Atenas"
+    ],
+    "a": 0,
+    "e": "Pablo presenta a las iglesias de Macedonia como ejemplo de generosidad aun en medio de pruebas.",
+    "r": "2 Corintios 8:1-2"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué hizo Cristo siendo rico, según Pablo?",
+    "o": [
+      "Se hizo pobre por amor a nosotros",
+      "Buscó riquezas terrenales",
+      "Evitó relacionarse con pobres",
+      "Renunció a su misión"
+    ],
+    "a": 0,
+    "e": "Pablo recuerda la gracia de Cristo, quien se hizo pobre para enriquecer a otros por su pobreza.",
+    "r": "2 Corintios 8:9"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué principio debe guiar la contribución de cada uno?",
+    "o": [
+      "Dar más de lo que tiene",
+      "Dar conforme a lo que tiene",
+      "Dar solo para ser visto",
+      "Dar por presión"
+    ],
+    "a": 1,
+    "e": "La contribución se acepta según lo que uno tiene, no según lo que no tiene.",
+    "r": "2 Corintios 8:12"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué dice Pablo que Dios puede hacer con toda gracia?",
+    "o": [
+      "Hacer que abunde para los creyentes",
+      "Reservarla solo para unos pocos",
+      "Retirarla ante cualquier dificultad",
+      "Venderla por méritos"
+    ],
+    "a": 0,
+    "e": "Dios puede hacer abundar toda gracia para que haya suficiencia y abundancia para buenas obras.",
+    "r": "2 Corintios 9:8"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué resultado produce la generosidad de los creyentes además de suplir necesidades?",
+    "o": [
+      "Muchas acciones de gracias a Dios",
+      "Rivalidad entre iglesias",
+      "Orgullo personal",
+      "Desinterés espiritual"
+    ],
+    "a": 0,
+    "e": "La ayuda no solo suple necesidades, también provoca abundantes acciones de gracias a Dios.",
+    "r": "2 Corintios 9:12"
+  },
+  {
+    "d": 2,
+    "q": "¿Con qué armas dice Pablo que se combate en la guerra espiritual?",
+    "o": [
+      "Armas carnales",
+      "Armas poderosas en Dios",
+      "Armas de hierro",
+      "Armas de negociación"
+    ],
+    "a": 1,
+    "e": "Las armas del ministerio no son carnales, sino poderosas en Dios para derribar fortalezas.",
+    "r": "2 Corintios 10:3-4"
+  },
+  {
+    "d": 2,
+    "q": "¿Qué debe llevar cautivo el creyente?",
+    "o": [
+      "Todo pensamiento a la obediencia de Cristo",
+      "Toda opinión ajena",
+      "Toda riqueza",
+      "Toda tradición humana"
+    ],
+    "a": 0,
+    "e": "Pablo describe la tarea de llevar todo pensamiento cautivo a la obediencia de Cristo.",
+    "r": "2 Corintios 10:5"
+  },
+  {
+    "d": 2,
+    "q": "¿De quién debe gloriarse el que se gloría?",
+    "o": [
+      "De sí mismo",
+      "Del Señor",
+      "De su linaje",
+      "De sus logros"
+    ],
+    "a": 1,
+    "e": "La aprobación verdadera viene del Señor; por eso quien se gloría debe gloriarse en Él.",
+    "r": "2 Corintios 10:17-18"
+  },
+  {
+    "d": 3,
+    "q": "¿A qué compara Pablo su preocupación por la iglesia?",
+    "o": [
+      "A los celos de Dios",
+      "A una competencia política",
+      "A una deuda comercial",
+      "A una disputa familiar"
+    ],
+    "a": 0,
+    "e": "Pablo expresa un celo piadoso para presentar a la iglesia como una virgen pura a Cristo.",
+    "r": "2 Corintios 11:2"
+  },
+  {
+    "d": 3,
+    "q": "¿Qué dice Pablo que Satanás puede hacer para engañar?",
+    "o": [
+      "Disfrazarse como ángel de luz",
+      "Anular la palabra de Dios",
+      "Cambiar el evangelio verdadero",
+      "Impedir toda oración"
+    ],
+    "a": 0,
+    "e": "Pablo advierte que Satanás se disfraza como ángel de luz y que sus servidores pueden aparentar justicia.",
+    "r": "2 Corintios 11:14-15"
+  },
+  {
+    "d": 3,
+    "q": "¿Qué experiencia extraordinaria relata Pablo en 2 Corintios 12?",
+    "o": [
+      "Una visión y revelación del Señor",
+      "La reconstrucción del templo",
+      "Una visita a Egipto",
+      "Un encuentro con César"
+    ],
+    "a": 0,
+    "e": "Pablo relata una experiencia de visión y revelación, hablando de un hombre arrebatado hasta el tercer cielo.",
+    "r": "2 Corintios 12:1-4"
+  },
+  {
+    "d": 3,
+    "q": "¿Qué dice Pablo sobre el aguijón en la carne?",
+    "o": [
+      "Que le fue dado para evitar exaltarse",
+      "Que lo convirtió en gobernante",
+      "Que desapareció inmediatamente",
+      "Que era una señal de riqueza"
+    ],
+    "a": 0,
+    "e": "Pablo relaciona el aguijón con el propósito de no exaltarse por las revelaciones recibidas.",
+    "r": "2 Corintios 12:7"
+  },
+  {
+    "d": 3,
+    "q": "¿Qué pide Pablo a los corintios al cerrar la carta?",
+    "o": [
+      "Que se perfeccionen, se consuelen y vivan en paz",
+      "Que abandonen la fe",
+      "Que busquen honores",
+      "Que dejen de congregarse"
+    ],
+    "a": 0,
+    "e": "La exhortación final llama a la restauración, el ánimo, la unidad y la paz.",
+    "r": "2 Corintios 13:11"
   }
 ];
 const POINTS_PER_QUESTION = 5;
 const TOTAL_QUESTIONS = BANK.length;
+const SOLO_QUESTIONS = 15;
+const DUEL_QUESTIONS = 8;
+const STAGES = [{at:5,label:'ETAPA 1 · 25 PTS'},{at:10,label:'ETAPA 2 · 50 PTS'},{at:15,label:'GRAN FINAL · 75 PTS'}];
 const $ = id => document.getElementById(id);
 const state = {
   mode: "single", questions: [], index: 0, correct: 0, answered: false,
@@ -228,13 +543,13 @@ function resetLifelines(){
   $("lifeline-result").textContent="";
 }
 function buildLadder(){
-  const count=state.mode==="single"?TOTAL_QUESTIONS:8;
+  const count=state.mode==="single"?SOLO_QUESTIONS:DUEL_QUESTIONS;
   $("prize-ladder").innerHTML=Array.from({length:count},(_,i)=>i+1).reverse()
-    .map(n=>'<li data-step="'+(n-1)+'"><span>'+n+'</span><b>'+(n*POINTS_PER_QUESTION)+' pts</b></li>').join("");
+    .map(n=>{const stage=STAGES.find(s=>s.at===n);return '<li data-step="'+(n-1)+'" class="'+(stage?'milestone':'')+'"><span>'+n+'</span><b>'+(n*POINTS_PER_QUESTION)+' pts</b>'+(stage?'<i>'+stage.label+'</i>':'')+'</li>';}).join("");
 }
 function startSingle(){
   state.soloName=$("name-one").value.trim()||"Participante";
-  state.mode="single";state.questions=shuffle(BANK);state.index=0;state.correct=0;
+  state.mode="single";state.questions=[1,2,3].flatMap(d=>shuffle(BANK.filter(q=>q.d===d)).slice(0,5));state.index=0;state.correct=0;
   state.answered=false;state.lastCorrect=false;state.players=[];state.totalAnswered=0;
   resetLifelines();$("score").textContent="0";$("duel-scoreboard").hidden=true;
   buildLadder();screen("game");render();
@@ -261,11 +576,11 @@ function currentQuestion(){
 function render(){
   const q=currentQuestion();state.answered=false;
   const questionNo=state.mode==="single"?state.index+1:state.round+1;
-  const total=state.mode==="single"?TOTAL_QUESTIONS:8;
+  const total=state.mode==="single"?SOLO_QUESTIONS:DUEL_QUESTIONS;
   $("q-number").textContent=state.mode==="single"?state.soloName.toUpperCase()+" · PREGUNTA "+questionNo+" DE "+total:
     state.players[state.turn].name.toUpperCase()+" · TURNO "+(state.turn+1)+" · PREGUNTA "+questionNo+" DE 8";
   $("difficulty").textContent=q.d===1?"FÁCIL":q.d===2?"INTERMEDIO":"DIFÍCIL";
-  $("progress").style.width=((state.mode==="single"?state.index:state.totalAnswered)/ (state.mode==="single"?TOTAL_QUESTIONS:16)*100)+"%";
+  $("progress").style.width=((state.mode==="single"?state.index:state.totalAnswered)/ (state.mode==="single"?SOLO_QUESTIONS:16)*100)+"%";
   $("question").textContent=q.q;$("feedback").hidden=true;$("lifeline-result").textContent="";
   $("answers").innerHTML=q.o.map((v,i)=>'<button class="answer" data-index="'+i+'"><span>'+String.fromCharCode(65+i)+'</span><b>'+v+'</b></button>').join("");
   document.querySelectorAll(".answer").forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.index))));
@@ -296,18 +611,18 @@ function answer(n){
   $("feedback-title").className=ok?"good":"bad";
   $("explanation").textContent=q.e;$("reference").textContent="REFERENCIA: "+q.r;
   $("continue").textContent=state.mode==="single"?
-    (state.index===TOTAL_QUESTIONS-1||!ok?"VER RESULTADO":"SIGUIENTE PREGUNTA →"):
+    (state.index===SOLO_QUESTIONS-1||!ok?"VER RESULTADO":"SIGUIENTE PREGUNTA →"):
     (state.totalAnswered===15?"VER GANADOR":"SIGUIENTE TURNO →");
   $("feedback").hidden=false;
 }
 function finish(){
   if(state.mode==="single"){
     const points=state.correct*POINTS_PER_QUESTION;
-    $("end-title").textContent=state.correct===TOTAL_QUESTIONS?"¡COMPLETASTE 2 CORINTIOS!":state.correct===0?"¡Sigue estudiando 2 Corintios!":"¡Buen esfuerzo!";
+    $("end-title").textContent=state.correct===SOLO_QUESTIONS?"¡COMPLETASTE 2 CORINTIOS!":state.correct===0?"¡Sigue estudiando 2 Corintios!":"¡Buen esfuerzo!";
     $("end-icon").textContent=state.correct===TOTAL_QUESTIONS?"🏆":"📖";
     $("end-points").textContent=String(points);
-    $("end-copy").textContent=state.soloName+", respondiste correctamente "+state.correct+" de "+TOTAL_QUESTIONS+" preguntas. Cada acierto vale 5 puntos.";
-    $("end-reference").textContent="Puntuación final: "+points+" de "+(TOTAL_QUESTIONS*POINTS_PER_QUESTION)+" puntos.";
+    $("end-copy").textContent=state.soloName+", respondiste correctamente "+state.correct+" de "+SOLO_QUESTIONS+" preguntas. Cada acierto vale 5 puntos.";
+    $("end-reference").textContent="Puntuación final: "+points+" de "+(SOLO_QUESTIONS*POINTS_PER_QUESTION)+" puntos.";
     screen("end");return;
   }
   const [a,b]=state.players;
@@ -360,3 +675,9 @@ bind("exit","click",()=>{if(confirm("¿Deseas salir de la partida? Perderás el 
 bind("continue","click",continueGame);
 ["fifty","audience","friend"].forEach(id=>bind(id,"click",()=>useLifeline(id)));
 buildLadder();
+
+// Instalación como aplicación web en teléfonos compatibles.
+let installPrompt=null;
+window.addEventListener("beforeinstallprompt",event=>{event.preventDefault();installPrompt=event;const b=$("install-app");if(b)b.hidden=false;});
+bind("install-app","click",async()=>{if(!installPrompt)return;installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;$("install-app").hidden=true;});
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
