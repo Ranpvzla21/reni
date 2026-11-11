@@ -517,6 +517,248 @@ const BANK = [
     "r": "2 Corintios 13:11"
   }
 ];
+const TRUE_FALSE_BANK = [
+  {
+    "d": 1,
+    "q": "Pablo llama a Dios Padre de misericordias y Dios de toda consolación.",
+    "a": 0,
+    "e": "Así describe Pablo a Dios al comenzar su carta.",
+    "r": "2 Corintios 1:3",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 1,
+    "q": "Según Pablo, las promesas de Dios son «sí» en Cristo.",
+    "a": 0,
+    "e": "Las promesas de Dios encuentran su afirmación en Cristo.",
+    "r": "2 Corintios 1:20",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 1,
+    "q": "Donde está el Espíritu del Señor, allí hay libertad.",
+    "a": 0,
+    "e": "La presencia del Espíritu del Señor trae libertad.",
+    "r": "2 Corintios 3:17",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 1,
+    "q": "El tesoro del evangelio está guardado en vasos de barro.",
+    "a": 0,
+    "e": "La imagen destaca que el poder extraordinario procede de Dios.",
+    "r": "2 Corintios 4:7",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 1,
+    "q": "Quien está en Cristo es una nueva creación.",
+    "a": 0,
+    "e": "En Cristo lo antiguo pasó y ha llegado lo nuevo.",
+    "r": "2 Corintios 5:17",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 1,
+    "q": "Dios confió a los creyentes el ministerio de la reconciliación.",
+    "a": 0,
+    "e": "Dios reconcilia por medio de Cristo y confía el mensaje de reconciliación.",
+    "r": "2 Corintios 5:18-19",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 1,
+    "q": "Pablo exhorta a recibir en vano la gracia de Dios.",
+    "a": 1,
+    "e": "Pablo exhorta precisamente a no recibir en vano la gracia de Dios.",
+    "r": "2 Corintios 6:1",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 2,
+    "q": "La tristeza conforme a la voluntad de Dios produce arrepentimiento para salvación.",
+    "a": 0,
+    "e": "La tristeza conforme a Dios produce arrepentimiento que conduce a la salvación.",
+    "r": "2 Corintios 7:10",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 2,
+    "q": "Cristo, siendo rico, se hizo pobre por amor a nosotros.",
+    "a": 0,
+    "e": "Pablo usa el ejemplo de la gracia de Cristo para enseñar generosidad.",
+    "r": "2 Corintios 8:9",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 2,
+    "q": "Cada persona debe dar de mala gana y por obligación.",
+    "a": 1,
+    "e": "La contribución no debe hacerse con tristeza ni por obligación; Dios ama al dador alegre.",
+    "r": "2 Corintios 9:7",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 2,
+    "q": "Dios puede hacer que toda gracia abunde para los creyentes.",
+    "a": 0,
+    "e": "Dios hace abundar su gracia para que haya suficiencia para toda buena obra.",
+    "r": "2 Corintios 9:8",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 2,
+    "q": "Las armas de nuestra lucha son poderosas en Dios.",
+    "a": 0,
+    "e": "Pablo describe armas espirituales poderosas en Dios para derribar fortalezas.",
+    "r": "2 Corintios 10:4",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 2,
+    "q": "Pablo recomienda llevar todo pensamiento cautivo a la obediencia de Cristo.",
+    "a": 0,
+    "e": "El apóstol llama a llevar los pensamientos a la obediencia de Cristo.",
+    "r": "2 Corintios 10:5",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 2,
+    "q": "El que se gloría debe gloriarse en sí mismo.",
+    "a": 1,
+    "e": "Quien se gloría debe hacerlo en el Señor.",
+    "r": "2 Corintios 10:17",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 3,
+    "q": "Satanás puede disfrazarse como ángel de luz.",
+    "a": 0,
+    "e": "Pablo advierte que Satanás se disfraza como ángel de luz.",
+    "r": "2 Corintios 11:14-15",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 3,
+    "q": "El poder de Cristo se perfecciona en la debilidad.",
+    "a": 0,
+    "e": "El Señor respondió que su gracia era suficiente y su poder se perfeccionaba en la debilidad.",
+    "r": "2 Corintios 12:9",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 3,
+    "q": "Pablo pidió al Señor tres veces que el aguijón se apartara de él.",
+    "a": 0,
+    "e": "Pablo relata que rogó tres veces al Señor respecto al aguijón.",
+    "r": "2 Corintios 12:8",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 3,
+    "q": "Pablo afirma que los creyentes nunca deben examinarse para comprobar su fe.",
+    "a": 1,
+    "e": "Pablo exhorta a examinarse para comprobar si están en la fe.",
+    "r": "2 Corintios 13:5",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 3,
+    "q": "La carta termina exhortando a los corintios a vivir en paz.",
+    "a": 0,
+    "e": "Entre las exhortaciones finales, Pablo llama a vivir en paz.",
+    "r": "2 Corintios 13:11",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  },
+  {
+    "d": 3,
+    "q": "Cristo fue crucificado en debilidad, pero vive por el poder de Dios.",
+    "a": 0,
+    "e": "Pablo contrasta la debilidad de la crucifixión con la vida de Cristo por el poder de Dios.",
+    "r": "2 Corintios 13:4",
+    "type": "tf",
+    "o": [
+      "Verdadero",
+      "Falso"
+    ]
+  }
+];
 const POINTS_PER_QUESTION = 5;
 const TOTAL_QUESTIONS = BANK.length;
 const SOLO_QUESTIONS = 15;
@@ -549,19 +791,32 @@ function buildLadder(){
 }
 function startSingle(){
   state.soloName=$("name-one").value.trim()||"Participante";
-  state.mode="single";state.questions=[1,2,3].flatMap(d=>shuffle(BANK.filter(q=>q.d===d)).slice(0,5));state.index=0;state.correct=0;
+  state.mode="single";state.questions=buildSoloQuestions();state.index=0;state.correct=0;
   state.answered=false;state.lastCorrect=false;state.players=[];state.totalAnswered=0;
   resetLifelines();$("score").textContent="0";$("duel-scoreboard").hidden=true;
   buildLadder();screen("game");render();
 }
+function buildSoloQuestions(){
+  const out=[];
+  for(const d of [1,2,3]){
+    out.push(...shuffle(BANK.filter(q=>q.d===d)).slice(0,3));
+    out.push(...shuffle(TRUE_FALSE_BANK.filter(q=>q.d===d)).slice(0,2));
+  }
+  return shuffle(out);
+}
+function buildCompetitionSets(){
+  const mc=[1,2,3].map(d=>shuffle(BANK.filter(q=>q.d===d)));
+  const tf=[1,2,3].map(d=>shuffle(TRUE_FALSE_BANK.filter(q=>q.d===d)));
+  const plan=[{mc:2,tf:1},{mc:1,tf:2},{mc:1,tf:1}];
+  return [0,1].map(()=>{const set=[];plan.forEach((p,i)=>set.push(...mc[i].splice(0,p.mc),...tf[i].splice(0,p.tf)));return shuffle(set);});
+}
 function startCompetition(mode){
   const defaults=mode==="teams"?["Equipo 1","Equipo 2"]:["Participante 1","Participante 2"];
   const names=[$("name-one").value.trim(),$("name-two").value.trim()].map((name,i)=>name||defaults[i]);
-  const picked=shuffle(BANK);
-  if(picked.length<16){alert("Se necesitan al menos 16 preguntas para esta modalidad.");return;}
+  const sets=buildCompetitionSets();
   state.mode=mode;
   state.players=names.map(name=>({name,score:0,correct:0}));
-  state.sets=[picked.slice(0,8),picked.slice(8,16)];
+  state.sets=sets;
   state.turn=0;state.round=0;state.totalAnswered=0;state.answered=false;state.lastCorrect=false;
   state.questions=state.sets[0];state.correct=0;
   $("duel-scoreboard").hidden=false;
@@ -581,9 +836,10 @@ function render(){
     state.players[state.turn].name.toUpperCase()+" · TURNO "+(state.turn+1)+" · PREGUNTA "+questionNo+" DE 8";
   $("difficulty").textContent=q.d===1?"FÁCIL":q.d===2?"INTERMEDIO":"DIFÍCIL";
   $("progress").style.width=((state.mode==="single"?state.index:state.totalAnswered)/ (state.mode==="single"?SOLO_QUESTIONS:16)*100)+"%";
-  $("question").textContent=q.q;$("feedback").hidden=true;$("lifeline-result").textContent="";
-  $("answers").innerHTML=q.o.map((v,i)=>'<button class="answer" data-index="'+i+'"><span>'+String.fromCharCode(65+i)+'</span><b>'+v+'</b></button>').join("");
+  $("question").textContent=q.q;$("question-label").textContent=q.type==="tf"?"VERDADERO O FALSO · 2 CORINTIOS":"2 CORINTIOS · LBLA";$("feedback").hidden=true;$("lifeline-result").textContent="";
+  $("answers").innerHTML=q.o.map((v,i)=>'<button class="answer" data-index="'+i+'"><span>'+(q.type==="tf"?["V","F"][i]:String.fromCharCode(65+i))+'</span><b>'+v+'</b></button>').join("");
   document.querySelectorAll(".answer").forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.index))));
+  $("fifty").disabled=q.type==="tf"||state.used.fifty;
   const ladderStep=state.mode==="single"?state.index:state.round;
   document.querySelectorAll("#prize-ladder li").forEach(li=>{
     const step=Number(li.dataset.step);li.classList.toggle("current",step===ladderStep);
@@ -651,12 +907,13 @@ function continueGame(){
 function useLifeline(id){
   if(state.used[id]||state.answered)return;state.used[id]=true;$(id).disabled=true;
   const q=currentQuestion();
+  if(id==="fifty"&&q.type==="tf"){$("lifeline-result").textContent="El comodín 50:50 no está disponible en preguntas de Verdadero o Falso.";return;}
   if(id==="fifty"){
     const wrong=shuffle(q.o.map((_,i)=>i).filter(i=>i!==q.a)).slice(0,2);
     document.querySelectorAll(".answer").forEach((b,i)=>{if(wrong.includes(i)){b.disabled=true;b.classList.add("removed");b.querySelector("b").textContent="Opción descartada";}});
     $("lifeline-result").textContent="50:50: se eliminaron dos opciones incorrectas.";
   }else if(id==="audience"){
-    $("lifeline-result").textContent="El público considera más probable la opción "+String.fromCharCode(65+q.a)+".";
+    $("lifeline-result").textContent="El público considera más probable la opción "+(q.type==="tf"?["Verdadero","Falso"][q.a]:String.fromCharCode(65+q.a))+". ";
   }else $("lifeline-result").textContent="Consejo: lee con atención y recuerda el contexto de 2 Corintios.";
 }
 function goHome(){screen("home");}
