@@ -1,0 +1,11 @@
+{
+  "name": "Desafío Bíblico FTU 2026",
+  "short_name": "Desafío Bíblico",
+  "description": "Juego bíblico de 2 Corintios con preguntas, niveles, comodines y premios.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#061b20",
+  "theme_color": "#061b20",
+  "lang": "es"
+}
