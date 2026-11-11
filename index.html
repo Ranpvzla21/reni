@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#12c6d2">
+<meta name="theme-color" content="#061b20">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Desafío Bíblico FTU 2026: preguntas interactivas basadas exclusivamente en 2 Corintios, con referencias LBLA.">
 <title>Desafío Bíblico FTU 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +19,10 @@
     <img class="hero-cover" src="assets/portada-ftu.jpg..jpg" alt="Desafío Bíblico FTU Venezuela 2026">
     <div class="eyebrow">DESAFÍO BÍBLICO · 2 CORINTIOS</div>
     <h1 class="brand-title"><span>DESAFÍO</span><em>BÍBLICO</em><small>FTU VENEZUELA · 2026</small></h1>
-    <p>16 preguntas de 2 Corintios. 4 opciones por pregunta. Cada respuesta correcta vale 5 puntos. ¡Pon a prueba tu conocimiento!</p>
+    <p>40 preguntas originales de 2 Corintios. En cada partida individual se presentan 15 preguntas por niveles, con etapas de premio y comodines. Cada acierto vale 5 puntos.</p>
   </div>
-  <div class="intro-card"><div class="intro-row"><div><small>PUNTUACIÓN MÁXIMA</small><strong>80</strong><span>puntos · 5 por acierto</span></div><div class="medal">🏆</div></div><div class="rules"><span>Solo 2 Corintios</span><span>5 puntos por acierto</span><span>16 preguntas</span></div><button class="gold-btn" id="start">JUGAR SOLO <b>→</b></button></div>
+  <div class="intro-card"><div class="intro-row"><div><small>BANCO DE PREGUNTAS</small><strong>40+</strong><span>preguntas diferentes · 2 Corintios</span></div><div class="medal">🏆</div></div><div class="rules"><span>Solo 2 Corintios</span><span>5 puntos por acierto</span><span>15 por partida individual</span><span>3 niveles de dificultad</span></div><button class="gold-btn" id="start">JUGAR SOLO <b>→</b></button>
+    <button class="plain-btn" id="install-app" hidden>INSTALAR EN MI TELÉFONO</button></div>
   <div class="mode-card">
     <div class="mode-title">ELIGE TU MODALIDAD</div>
     <label class="name-label" id="name-one-label">Nombre del participante 1<input id="name-one" type="text" maxlength="24" placeholder="Escribe el nombre del participante o equipo 1" autocomplete="off"></label>
@@ -40,7 +43,7 @@
       <article class="question-card"><div class="question-label">2 CORINTIOS · LBLA</div><h2 id="question">Preparando pregunta…</h2><div class="answers" id="answers"></div><div class="feedback" id="feedback" hidden aria-live="polite"><strong id="feedback-title"></strong><p id="explanation"></p><small id="reference"></small><button class="gold-btn" id="continue">CONTINUAR <b>→</b></button></div></article>
       <div class="lifelines"><span>COMODINES</span><button id="fifty">½ <b>50:50</b></button><button id="audience">▥ <b>Público</b></button><button id="friend">☎ <b>Amigo</b></button></div><p class="lifeline-result" id="lifeline-result" aria-live="polite"></p>
     </div>
-    <aside class="ladder"><div class="ladder-head">PUNTOS · 5 POR ACIERTO</div><ol id="prize-ladder"></ol><div class="safe-note">Cada acierto suma 5 puntos</div></aside>
+    <aside class="ladder"><div class="ladder-head">ESCALERA DE PREMIOS</div><ol id="prize-ladder"></ol><div class="safe-note">Etapas: 25 · 50 · 75 puntos</div></aside>
   </div>
 </section>
 <section class="screen" id="end">
