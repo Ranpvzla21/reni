@@ -48,3 +48,13 @@ body{background:radial-gradient(ellipse at 50% -12%,#087d88 0,transparent 52%),l
 
 /* Ocultar el marcador hasta iniciar una partida de dos lados */
 .duel-scoreboard[hidden]{display:none!important}
+
+/* Etapas de premio y experiencia táctil en móviles */
+.ladder li.milestone{border:1px solid #12c6d277;color:#8cf4f2;font-weight:800;background:#12c6d20d}
+.ladder li.milestone i{display:block;margin-left:auto;font-size:8px;letter-spacing:.5px;color:#8cf4f2;font-style:normal;text-align:right}
+#install-app{display:block;margin:12px auto 0;color:#8cf4f2;border:1px solid #12c6d266;border-radius:8px;padding:12px 18px;font-size:10px;cursor:pointer}
+#install-app[hidden]{display:none}
+button,input{touch-action:manipulation}
+button:focus-visible,input:focus-visible{outline:3px solid #8cf4f2;outline-offset:3px}
+@media(max-width:560px){.app{width:calc(100% - 20px);padding-bottom:env(safe-area-inset-bottom)}.topbar{height:58px}.top-label{font-size:8px;letter-spacing:1px}.screen{padding-top:20px}.hero-cover{width:100%;max-height:220px;object-fit:contain;background:#071b20}.hero p{font-size:13px;line-height:1.6}.intro-card{padding:17px}.rules{gap:10px 14px}.rules span{font-size:10px}.question-card{margin-top:14px;padding:19px 14px}.question-card h2{font-size:24px;line-height:1.28}.answer{min-height:58px;padding:12px}.answer b{font-size:14px}.lifelines{justify-content:space-between}.lifelines button{min-height:44px;flex:1}.ladder ol{grid-template-columns:repeat(5,minmax(0,1fr))}.ladder li{flex-wrap:wrap;min-height:34px}.ladder li b{font-size:9px}.ladder li.milestone i{width:100%;font-size:6px;margin:0;text-align:center}.duel-scoreboard{position:sticky;top:4px;z-index:3}.end-card{margin:8px auto;padding:25px 16px}.gold-btn{min-height:48px}footer{font-size:8px;line-height:1.6}}
+@media(hover:none){.answer:hover:not(:disabled),.mode-btn:hover{transform:none;box-shadow:none}}
