@@ -759,6 +759,28 @@ const TRUE_FALSE_BANK = [
     ]
   }
 ];
+
+const COMPLETE_BANK = [
+  {d:1,q:"Completa la frase: «Bendito sea el Dios y Padre de nuestro Señor Jesucristo, Padre de misericordias y Dios de toda ____».",o:["consolación","sabiduría","justicia","fortaleza"],a:0,e:"Pablo presenta a Dios como fuente de todo consuelo.",r:"2 Corintios 1:3",type:"complete"},
+  {d:1,q:"Completa la frase: «Porque todas las promesas de Dios son en Él ____».",o:["no","sí"],a:1,e:"En Cristo las promesas de Dios tienen su afirmación.",r:"2 Corintios 1:20",type:"complete"},
+  {d:1,q:"Completa la frase: «Donde está el Espíritu del Señor, allí hay ____».",o:["libertad","temor","confusión","silencio"],a:0,e:"Pablo afirma que la presencia del Espíritu del Señor trae libertad.",r:"2 Corintios 3:17",type:"complete"},
+  {d:1,q:"Completa la frase: «Tenemos este tesoro en vasos de ____».",o:["oro","barro","plata","mármol"],a:1,e:"La imagen de los vasos de barro resalta que el poder extraordinario procede de Dios.",r:"2 Corintios 4:7",type:"complete"},
+  {d:1,q:"Completa la frase: «Si alguno está en Cristo, nueva ____ es».",o:["criatura","ley","promesa","ciudad"],a:0,e:"Pablo enseña que en Cristo hay una nueva creación.",r:"2 Corintios 5:17",type:"complete"},
+  {d:1,q:"Completa la frase: «Dios… nos dio el ministerio de la ____».",o:["enseñanza","reconciliación","administración","sanidad"],a:1,e:"Dios reconcilia por medio de Cristo y confía ese ministerio.",r:"2 Corintios 5:18",type:"complete"},
+  {d:2,q:"Completa la frase: «He aquí, ahora es el tiempo ____; he aquí, ahora es el día de salvación».",o:["aceptable","lejano","incierto","pasado"],a:0,e:"Pablo subraya la urgencia del momento de salvación.",r:"2 Corintios 6:2",type:"complete"},
+  {d:2,q:"Completa la frase: «La tristeza que es conforme a la voluntad de Dios produce un arrepentimiento que conduce a la ____».",o:["riqueza","salvación","fama","discusión"],a:1,e:"La tristeza conforme a Dios conduce al arrepentimiento para salvación.",r:"2 Corintios 7:10",type:"complete"},
+  {d:2,q:"Completa la frase: «Porque conocéis la gracia de nuestro Señor Jesucristo, que siendo rico, sin embargo por amor a vosotros se hizo ____».",o:["pobre","rey","siervo romano","juez"],a:0,e:"Pablo recuerda la entrega de Cristo como ejemplo de gracia.",r:"2 Corintios 8:9",type:"complete"},
+  {d:2,q:"Completa la frase: «Dios ama al dador ____».",o:["silencioso","alegre","famoso","obligado"],a:1,e:"La generosidad debe nacer de una decisión voluntaria y alegre.",r:"2 Corintios 9:7",type:"complete"},
+  {d:2,q:"Completa la frase: «Dios puede hacer que toda gracia abunde para vosotros, a fin de que… abundéis para toda ____».",o:["buena obra","riqueza","discusión","victoria humana"],a:0,e:"La gracia de Dios capacita para abundar en buenas obras.",r:"2 Corintios 9:8",type:"complete"},
+  {d:2,q:"Completa la frase: «Las armas de nuestra contienda no son carnales, sino poderosas en ____».",o:["la tradición","Dios","la fuerza humana","el dinero"],a:1,e:"Pablo enseña que la lucha espiritual se realiza con armas poderosas en Dios.",r:"2 Corintios 10:4",type:"complete"},
+  {d:3,q:"Completa la frase: «Llevando cautivo todo pensamiento a la obediencia de ____».",o:["Pablo","Cristo","la ley romana","los hombres"],a:1,e:"El apóstol llama a someter todo pensamiento a Cristo.",r:"2 Corintios 10:5",type:"complete"},
+  {d:3,q:"Completa la frase: «El que se gloría, que se gloríe en el ____».",o:["Señor","mundo","poder","dinero"],a:0,e:"La gloria y la aprobación verdadera proceden del Señor.",r:"2 Corintios 10:17-18",type:"complete"},
+  {d:3,q:"Completa la frase: «Mi gracia te es ____; porque mi poder se perfecciona en la debilidad».",o:["suficiente","escasa","lejana","temporal"],a:0,e:"La respuesta del Señor a Pablo destaca la suficiencia de su gracia.",r:"2 Corintios 12:9",type:"complete"},
+  {d:3,q:"Completa la frase: «Cuando soy débil, entonces soy ____».",o:["fuerte","olvidado","rico","invencible"],a:0,e:"Pablo reconoce que el poder de Cristo se manifiesta en su debilidad.",r:"2 Corintios 12:10",type:"complete"},
+  {d:3,q:"Completa la frase: «Examinaos a vosotros mismos para ver si estáis en la ____».",o:["ciudad","fe","costumbre","ley"],a:1,e:"Pablo exhorta a examinarse para comprobar que se permanece en la fe.",r:"2 Corintios 13:5",type:"complete"},
+  {d:3,q:"Completa la frase: «Por lo demás, hermanos, regocijaos, sed perfectos, consolaos, sed de un mismo sentir, vivid en ____».",o:["paz","silencio","temor","aislamiento"],a:0,e:"La carta concluye con una exhortación a la restauración, la unidad y la paz.",r:"2 Corintios 13:11",type:"complete"}
+];
+
 const POINTS_PER_QUESTION = 5;
 const TOTAL_QUESTIONS = BANK.length;
 const SOLO_QUESTIONS = 15;
@@ -798,17 +820,21 @@ function startSingle(){
 }
 function buildSoloQuestions(){
   const out=[];
+  const plan=[{mc:2,tf:2,complete:1},{mc:2,tf:2,complete:1},{mc:1,tf:1,complete:3}];
   for(const d of [1,2,3]){
-    out.push(...shuffle(BANK.filter(q=>q.d===d)).slice(0,3));
-    out.push(...shuffle(TRUE_FALSE_BANK.filter(q=>q.d===d)).slice(0,2));
+    const p=plan[d-1];
+    out.push(...shuffle(BANK.filter(q=>q.d===d)).slice(0,p.mc));
+    out.push(...shuffle(TRUE_FALSE_BANK.filter(q=>q.d===d)).slice(0,p.tf));
+    out.push(...shuffle(COMPLETE_BANK.filter(q=>q.d===d)).slice(0,p.complete));
   }
   return shuffle(out);
 }
 function buildCompetitionSets(){
   const mc=[1,2,3].map(d=>shuffle(BANK.filter(q=>q.d===d)));
   const tf=[1,2,3].map(d=>shuffle(TRUE_FALSE_BANK.filter(q=>q.d===d)));
-  const plan=[{mc:2,tf:1},{mc:1,tf:2},{mc:1,tf:1}];
-  return [0,1].map(()=>{const set=[];plan.forEach((p,i)=>set.push(...mc[i].splice(0,p.mc),...tf[i].splice(0,p.tf)));return shuffle(set);});
+  const complete=[1,2,3].map(d=>shuffle(COMPLETE_BANK.filter(q=>q.d===d)));
+  const plan=[{mc:1,tf:1,complete:1},{mc:1,tf:1,complete:1},{mc:1,tf:0,complete:1}];
+  return [0,1].map(()=>{const set=[];plan.forEach((p,i)=>set.push(...mc[i].splice(0,p.mc),...tf[i].splice(0,p.tf),...complete[i].splice(0,p.complete)));return shuffle(set);});
 }
 function startCompetition(mode){
   const defaults=mode==="teams"?["Equipo 1","Equipo 2"]:["Participante 1","Participante 2"];
@@ -836,7 +862,7 @@ function render(){
     state.players[state.turn].name.toUpperCase()+" · TURNO "+(state.turn+1)+" · PREGUNTA "+questionNo+" DE 8";
   $("difficulty").textContent=q.d===1?"FÁCIL":q.d===2?"INTERMEDIO":"DIFÍCIL";
   $("progress").style.width=((state.mode==="single"?state.index:state.totalAnswered)/ (state.mode==="single"?SOLO_QUESTIONS:16)*100)+"%";
-  $("question").textContent=q.q;$("question-label").textContent=q.type==="tf"?"VERDADERO O FALSO · 2 CORINTIOS":"2 CORINTIOS · LBLA";$("feedback").hidden=true;$("lifeline-result").textContent="";
+  $("question").textContent=q.q;$("question-label").textContent=q.type==="tf"?"VERDADERO O FALSO · 2 CORINTIOS":q.type==="complete"?"COMPLETA EL VERSÍCULO · 2 CORINTIOS":"SELECCIÓN MÚLTIPLE · LBLA";$("feedback").hidden=true;$("lifeline-result").textContent="";
   $("answers").innerHTML=q.o.map((v,i)=>'<button class="answer" data-index="'+i+'"><span>'+(q.type==="tf"?["V","F"][i]:String.fromCharCode(65+i))+'</span><b>'+v+'</b></button>').join("");
   document.querySelectorAll(".answer").forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.index))));
   $("fifty").disabled=q.type==="tf"||state.used.fifty;
