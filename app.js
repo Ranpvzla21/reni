@@ -619,7 +619,7 @@ function finish(){
   if(state.mode==="single"){
     const points=state.correct*POINTS_PER_QUESTION;
     $("end-title").textContent=state.correct===SOLO_QUESTIONS?"¡COMPLETASTE 2 CORINTIOS!":state.correct===0?"¡Sigue estudiando 2 Corintios!":"¡Buen esfuerzo!";
-    $("end-icon").textContent=state.correct===TOTAL_QUESTIONS?"🏆":"📖";
+    $("end-icon").textContent=state.correct===SOLO_QUESTIONS?"🏆":"📖";
     $("end-points").textContent=String(points);
     $("end-copy").textContent=state.soloName+", respondiste correctamente "+state.correct+" de "+SOLO_QUESTIONS+" preguntas. Cada acierto vale 5 puntos.";
     $("end-reference").textContent="Puntuación final: "+points+" de "+(SOLO_QUESTIONS*POINTS_PER_QUESTION)+" puntos.";
@@ -636,7 +636,7 @@ function finish(){
 function continueGame(){
   if(!state.answered)return;
   if(state.mode==="single"){
-    if(!state.lastCorrect||state.index===TOTAL_QUESTIONS-1)finish();
+    if(!state.lastCorrect||state.index===SOLO_QUESTIONS-1)finish();
     else{state.index++;resetLifelines();render();}
     return;
   }
